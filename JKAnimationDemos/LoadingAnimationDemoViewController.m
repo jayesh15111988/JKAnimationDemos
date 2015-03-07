@@ -66,7 +66,6 @@
         self.circle.strokeStart = 0.0;
         self.circle.strokeEnd = 1.0;
         
-        
         // Add to parent layer
         [self.view.layer addSublayer: self.circle];
 

@@ -87,7 +87,7 @@
                                 <color key="color" red="0.32035152919999998" green="0.56017203280000005" blue="0.3390235023" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.84430793150000005" green="1" blue="0.9261234974" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="I2F-9k-0Ch" secondAttribute="centerY" id="pM9-Wf-Ubg"/>
                             <constraint firstAttribute="centerX" secondItem="I2F-9k-0Ch" secondAttribute="centerX" id="sqq-sx-xTE"/>
@@ -100,7 +100,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDq-ia-BFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-307" y="254"/>
+            <point key="canvasLocation" x="-189" y="587"/>
+        </scene>
+        <!--Fading Background View Controller-->
+        <scene sceneID="sIk-n5-8sR">
+            <objects>
+                <viewController storyboardIdentifier="fading" id="XV1-f2-S6f" customClass="FadingBackgroundViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A2B-c0-W7r"/>
+                        <viewControllerLayoutGuide type="bottom" id="3bz-Kz-fwp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o96-Pr-BGV" customClass="FadedView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0m-Xw-PE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202" y="587"/>
         </scene>
     </scenes>
 </document>

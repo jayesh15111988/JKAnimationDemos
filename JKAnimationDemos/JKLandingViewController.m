@@ -8,6 +8,7 @@
 
 #import "JKLandingViewController.h"
 #import "LoadingAnimationDemoViewController.h"
+#import "FadingBackgroundViewController.h"
 
 @interface JKLandingViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Core Animation Demos";
-    self.demosList = @[@"Loading View"];
+    self.demosList = @[@"Loading View", @"Faded View"];
     [self.tableView reloadData];
 }
 
@@ -37,8 +38,9 @@
     if(indexPath.row == 0) {
         LoadingAnimationDemoViewController* loadingDemo = [self.storyboard instantiateViewControllerWithIdentifier:@"loading"];
         [self.navigationController pushViewController:loadingDemo animated:YES];
-    } else {
-        
+    } else if(indexPath.row == 1){
+        FadingBackgroundViewController* fadingBackgroundViewController = (FadingBackgroundViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"fading"];
+        [self.navigationController pushViewController:fadingBackgroundViewController animated:YES];
     }
 }
 
