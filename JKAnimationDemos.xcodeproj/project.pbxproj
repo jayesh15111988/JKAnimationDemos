@@ -15,6 +15,7 @@
 		386D6D4B1AAB6EBE00131328 /* spriteAnimationRunning.png in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D4A1AAB6EBE00131328 /* spriteAnimationRunning.png */; };
 		386D6D4D1AAB70F200131328 /* smurf_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D4C1AAB70F200131328 /* smurf_sprite.png */; };
 		386D6D501AAB727900131328 /* BezierCurveArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D4F1AAB727900131328 /* BezierCurveArtViewController.m */; };
+		386D6D531AAB7C3700131328 /* TDCubeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D521AAB7C3700131328 /* TDCubeLayerViewController.m */; };
 		3874DB031AA3E92000259C0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB021AA3E92000259C0F /* main.m */; };
 		3874DB061AA3E92000259C0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB051AA3E92000259C0F /* AppDelegate.m */; };
 		3874DB091AA3E92000259C0F /* JKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB081AA3E92000259C0F /* JKLandingViewController.m */; };
@@ -48,6 +49,8 @@
 		386D6D4C1AAB70F200131328 /* smurf_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smurf_sprite.png; sourceTree = "<group>"; };
 		386D6D4E1AAB727900131328 /* BezierCurveArtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurveArtViewController.h; sourceTree = "<group>"; };
 		386D6D4F1AAB727900131328 /* BezierCurveArtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurveArtViewController.m; sourceTree = "<group>"; };
+		386D6D511AAB7C3700131328 /* TDCubeLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCubeLayerViewController.h; sourceTree = "<group>"; };
+		386D6D521AAB7C3700131328 /* TDCubeLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDCubeLayerViewController.m; sourceTree = "<group>"; };
 		3874DAFD1AA3E92000259C0F /* JKAnimationDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKAnimationDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3874DB011AA3E92000259C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3874DB021AA3E92000259C0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				386D6D481AAB6B5600131328 /* AnimatedImageDemoViewController.m */,
 				386D6D4E1AAB727900131328 /* BezierCurveArtViewController.h */,
 				386D6D4F1AAB727900131328 /* BezierCurveArtViewController.m */,
+				386D6D511AAB7C3700131328 /* TDCubeLayerViewController.h */,
+				386D6D521AAB7C3700131328 /* TDCubeLayerViewController.m */,
 			);
 			name = "Animation Demo ViewControllers";
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 			files = (
 				3874DB091AA3E92000259C0F /* JKLandingViewController.m in Sources */,
 				3849D2F21AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m in Sources */,
+				386D6D531AAB7C3700131328 /* TDCubeLayerViewController.m in Sources */,
 				3874DB061AA3E92000259C0F /* AppDelegate.m in Sources */,
 				386D6D431AAB694C00131328 /* FadedView.m in Sources */,
 				386D6D491AAB6B5600131328 /* AnimatedImageDemoViewController.m in Sources */,
