@@ -17,16 +17,19 @@
 @interface TDCubeLayerViewController ()
 @property (strong, nonatomic) IBOutlet UIView *cubeContainer;
 @property (assign) CATransform3D cubeShapeTransform;
+@property (weak, nonatomic) IBOutlet UILabel *rotationDirectionLabel;
 @property (strong) CALayer* cubeLayer;
 @property (assign) CGFloat xAngle;
 @property (assign) CGFloat yAngle;
 @property (assign) CGFloat zAngle;
+@property (assign) NSInteger rotationAngleDirectionToggle;
 @end
 
 @implementation TDCubeLayerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.rotationAngleDirectionToggle = 1;
     self.title = @"3D Cube transitions Demo";
     self.xAngle = 0;
     self.yAngle = self.xAngle;
@@ -62,7 +65,7 @@
         self.xAngle = 0.0;
     }
     
-    self.cubeShapeTransform = CATransform3DRotate(self.cubeShapeTransform, DEGREES_TO_RADIANS(self.xAngle), 1, 0, 0);
+    self.cubeShapeTransform = CATransform3DRotate(self.cubeShapeTransform, self.rotationAngleDirectionToggle * DEGREES_TO_RADIANS(self.xAngle), 1, 0, 0);
     [UIView animateWithDuration:2.0 animations:^{
         self.cubeLayer.transform = self.cubeShapeTransform;
     } completion:^(BOOL finished) {
@@ -76,7 +79,7 @@
     if(self.yAngle >= MAXIMUM_ROTATION_ANGLE_VALUE) {
         self.yAngle = 0.0;
     }
-    self.cubeShapeTransform = CATransform3DRotate(self.cubeShapeTransform, DEGREES_TO_RADIANS(self.yAngle), 0, 1, 0);
+    self.cubeShapeTransform = CATransform3DRotate(self.cubeShapeTransform, self.rotationAngleDirectionToggle * DEGREES_TO_RADIANS(self.yAngle), 0, 1, 0);
     [UIView animateWithDuration:2.0 animations:^{
         self.cubeLayer.transform = self.cubeShapeTransform;
     } completion:^(BOOL finished) {
@@ -90,7 +93,7 @@
     if(self.zAngle >= MAXIMUM_ROTATION_ANGLE_VALUE) {
         self.zAngle = 0.0;
     }
-    self.cubeShapeTransform = CATransform3DRotate(self.cubeShapeTransform, DEGREES_TO_RADIANS(self.zAngle), 0, 0, 1);
+    self.cubeShapeTransform = CATransform3DRotate(self.cubeShapeTransform, self.rotationAngleDirectionToggle * DEGREES_TO_RADIANS(self.zAngle), 0, 0, 1);
     [UIView animateWithDuration:2.0 animations:^{
         self.cubeLayer.transform = self.cubeShapeTransform;
     } completion:^(BOOL finished) {
@@ -138,4 +141,11 @@
     
     return cube;
 }
+
+- (IBAction)rotationDirectionSwitchChanged:(UISwitch *)sender {
+    self.rotationDirectionLabel.text = sender.isOn ? @"Anticlockwise" : @"Clockwise";
+    self.rotationAngleDirectionToggle *= -1;
+}
+
+
 @end
