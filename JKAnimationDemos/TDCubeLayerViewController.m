@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #define ROTATION_ANGLE_INCREMENT_FACTOR 10
 #define MAXIMUM_ROTATION_ANGLE_VALUE 360
+#define TRANSLATE_DISTANCE_INCREMENT_FACTOR 5
 
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
@@ -18,11 +19,19 @@
 @property (strong, nonatomic) IBOutlet UIView *cubeContainer;
 @property (assign) CATransform3D cubeShapeTransform;
 @property (weak, nonatomic) IBOutlet UILabel *rotationDirectionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *translationDirectionLabel;
+
 @property (strong) CALayer* cubeLayer;
 @property (assign) CGFloat xAngle;
 @property (assign) CGFloat yAngle;
 @property (assign) CGFloat zAngle;
+
+@property (assign) CGFloat xTranslate;
+@property (assign) CGFloat yTranslate;
+@property (assign) CGFloat zTranslate;
+
 @property (assign) NSInteger rotationAngleDirectionToggle;
+@property (assign) NSInteger translationDirectionToggle;
 @end
 
 @implementation TDCubeLayerViewController
@@ -30,10 +39,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.rotationAngleDirectionToggle = 1;
+    self.translationDirectionToggle = 1;
     self.title = @"3D Cube transitions Demo";
     self.xAngle = 0;
     self.yAngle = self.xAngle;
     self.zAngle = self.yAngle;
+    
+    self.xTranslate = self.zAngle;
+    self.yTranslate = self.xTranslate;
+    self.zTranslate = self.yTranslate;
     
     CATransform3D cubeTransform = CATransform3DIdentity;
     cubeTransform.m34 = -1.0/500.0;
@@ -101,6 +115,36 @@
     }];
 }
 
+- (IBAction)translateXButtonPressed:(id)sender {
+    self.xTranslate += TRANSLATE_DISTANCE_INCREMENT_FACTOR;
+    self.cubeShapeTransform = CATransform3DTranslate(self.cubeShapeTransform, self.translationDirectionToggle * self.xTranslate, 0, 0);
+    [UIView animateWithDuration:2.0 animations:^{
+        self.cubeLayer.transform = self.cubeShapeTransform;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (IBAction)translateYButtonPressed:(id)sender {
+    self.yTranslate += TRANSLATE_DISTANCE_INCREMENT_FACTOR;
+    self.cubeShapeTransform = CATransform3DTranslate(self.cubeShapeTransform, 0, self.translationDirectionToggle * self.yTranslate, 0);
+    [UIView animateWithDuration:2.0 animations:^{
+        self.cubeLayer.transform = self.cubeShapeTransform;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (IBAction)translateZButtonPressed:(id)sender {
+    self.zTranslate += TRANSLATE_DISTANCE_INCREMENT_FACTOR;
+    self.cubeShapeTransform = CATransform3DTranslate(self.cubeShapeTransform, 0, 0, self.translationDirectionToggle * self.zTranslate);
+    [UIView animateWithDuration:2.0 animations:^{
+        self.cubeLayer.transform = self.cubeShapeTransform;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
 -(CALayer*)createCubeWithTransform:(CATransform3D)transform {
     CATransformLayer* cube = [CATransformLayer new];
     
@@ -147,5 +191,9 @@
     self.rotationAngleDirectionToggle *= -1;
 }
 
+- (IBAction)translationDirectionSwitchChanged:(UISwitch *)sender {
+    self.translationDirectionLabel.text = sender.isOn ? @"Right" : @"Left";
+    self.translationDirectionToggle *= -1;
+}
 
 @end
