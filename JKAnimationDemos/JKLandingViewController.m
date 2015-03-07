@@ -10,6 +10,7 @@
 #import "LoadingAnimationDemoViewController.h"
 #import "FadingBackgroundViewController.h"
 #import "AnimatedImageDemoViewController.h"
+#import "BezierCurveArtViewController.h"
 
 @interface JKLandingViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Core Animation Demos";
-    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image"];
+    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path"];
     [self.tableView reloadData];
 }
 
@@ -45,6 +46,9 @@
     } else if (indexPath.row == 2) {
         AnimatedImageDemoViewController* animatedImageViewController = (AnimatedImageDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"animatedimage"];
         [self.navigationController pushViewController:animatedImageViewController animated:YES];
+    } else if (indexPath.row == 3) {
+        BezierCurveArtViewController* bezierPath = (BezierCurveArtViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"bezierpath"];
+        [self.navigationController pushViewController:bezierPath animated:YES];
     }
 }
 

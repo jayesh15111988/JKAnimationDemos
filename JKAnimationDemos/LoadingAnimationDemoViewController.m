@@ -34,7 +34,11 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    self.view.alpha = 0.0;
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        self.view.alpha = 0.0;
+    }];
+    
     [self.activityIndicator startAnimating];
     
     double delayInSeconds = 1.0;

@@ -157,5 +157,63 @@
             </objects>
             <point key="canvasLocation" x="589" y="587"/>
         </scene>
+        <!--Bezier Curve Art View Controller-->
+        <scene sceneID="9Tl-pm-oxL">
+            <objects>
+                <viewController storyboardIdentifier="bezierpath" id="u3A-Pt-Gdm" customClass="BezierCurveArtViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sbt-xJ-dFq"/>
+                        <viewControllerLayoutGuide type="bottom" id="oeM-Cf-vPs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WW5-jx-wiC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iju-Ft-4Rc">
+                                <rect key="frame" x="10" y="44" width="300" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="gy1-ET-E8g"/>
+                                    <constraint firstAttribute="width" constant="300" id="sea-D1-5qU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyK-Z4-KcN">
+                                <rect key="frame" x="10" y="256" width="300" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Iju-Ft-4Rc" secondAttribute="centerX" id="5Et-La-h4W"/>
+                            <constraint firstItem="Iju-Ft-4Rc" firstAttribute="leading" secondItem="WW5-jx-wiC" secondAttribute="leadingMargin" constant="-6" id="6Ij-sB-BsF"/>
+                            <constraint firstItem="Iju-Ft-4Rc" firstAttribute="width" secondItem="tyK-Z4-KcN" secondAttribute="width" id="8kv-SQ-iZR"/>
+                            <constraint firstItem="Iju-Ft-4Rc" firstAttribute="top" secondItem="sbt-xJ-dFq" secondAttribute="bottom" constant="24" id="Ghz-7T-FuC"/>
+                            <constraint firstItem="tyK-Z4-KcN" firstAttribute="leading" secondItem="WW5-jx-wiC" secondAttribute="leadingMargin" constant="-6" id="RZS-UR-Gfd"/>
+                            <constraint firstItem="oeM-Cf-vPs" firstAttribute="top" secondItem="tyK-Z4-KcN" secondAttribute="bottom" constant="44" id="STJ-lZ-4cx"/>
+                            <constraint firstAttribute="centerX" secondItem="tyK-Z4-KcN" secondAttribute="centerX" id="VpW-bS-fV7"/>
+                            <constraint firstItem="Iju-Ft-4Rc" firstAttribute="height" secondItem="tyK-Z4-KcN" secondAttribute="height" id="X0e-GQ-AMB"/>
+                            <constraint firstItem="tyK-Z4-KcN" firstAttribute="top" secondItem="Iju-Ft-4Rc" secondAttribute="bottom" constant="32" id="XID-QY-R5Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Iju-Ft-4Rc" secondAttribute="trailing" constant="-6" id="aJ5-xO-r16"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tyK-Z4-KcN" secondAttribute="trailing" constant="-6" id="eEO-xe-73W"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6Ij-sB-BsF"/>
+                                <exclude reference="aJ5-xO-r16"/>
+                                <exclude reference="RZS-UR-Gfd"/>
+                                <exclude reference="eEO-xe-73W"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="containerOne" destination="Iju-Ft-4Rc" id="L7M-5m-uNf"/>
+                        <outlet property="containerTwo" destination="tyK-Z4-KcN" id="f6F-Oi-cKC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLu-eD-P3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="587"/>
+        </scene>
     </scenes>
 </document>

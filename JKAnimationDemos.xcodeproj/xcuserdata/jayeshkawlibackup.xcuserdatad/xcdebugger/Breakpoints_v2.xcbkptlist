@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JKAnimationDemos/LoadingAnimationDemoViewController.m"
-            timestampString = "447441192.476928"
+            timestampString = "447443512.458147"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-animateCircle"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JKAnimationDemos/AnimatedImageDemoViewController.m"
-            timestampString = "447443297.352811"
+            timestampString = "447443512.458147"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-changeAnimatingImage"
             landmarkType = "5">
          </BreakpointContent>
