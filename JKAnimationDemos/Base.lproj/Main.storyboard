@@ -121,5 +121,41 @@
             </objects>
             <point key="canvasLocation" x="202" y="587"/>
         </scene>
+        <!--Animated Image Demo View Controller-->
+        <scene sceneID="8tq-zH-ESl">
+            <objects>
+                <viewController storyboardIdentifier="animatedimage" id="t8T-Lh-xBp" customClass="AnimatedImageDemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="icE-O4-8lT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lv8-Hv-XrF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HhU-1l-7YF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-FZ-KoB">
+                                <rect key="frame" x="70" y="150" width="180" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="3Uj-lW-jiO"/>
+                                    <constraint firstAttribute="height" constant="180" id="NMq-TY-j2H"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hwv-FZ-KoB" secondAttribute="centerX" id="QN3-PN-WYh"/>
+                            <constraint firstAttribute="centerY" secondItem="hwv-FZ-KoB" secondAttribute="centerY" id="jJp-hQ-O9z"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="animatingView" destination="hwv-FZ-KoB" id="vXY-H6-Xu8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5g-xC-KYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589" y="587"/>
+        </scene>
     </scenes>
 </document>

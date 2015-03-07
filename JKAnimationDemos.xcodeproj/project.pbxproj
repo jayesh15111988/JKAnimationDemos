@@ -10,6 +10,10 @@
 		3849D2F21AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3849D2F11AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m */; };
 		386D6D3F1AAB687C00131328 /* FadingBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D3E1AAB687C00131328 /* FadingBackgroundViewController.m */; };
 		386D6D431AAB694C00131328 /* FadedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D421AAB694C00131328 /* FadedView.m */; };
+		386D6D461AAB6B3000131328 /* movingManSprite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D451AAB6B3000131328 /* movingManSprite.jpg */; };
+		386D6D491AAB6B5600131328 /* AnimatedImageDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D481AAB6B5600131328 /* AnimatedImageDemoViewController.m */; };
+		386D6D4B1AAB6EBE00131328 /* spriteAnimationRunning.png in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D4A1AAB6EBE00131328 /* spriteAnimationRunning.png */; };
+		386D6D4D1AAB70F200131328 /* smurf_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D4C1AAB70F200131328 /* smurf_sprite.png */; };
 		3874DB031AA3E92000259C0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB021AA3E92000259C0F /* main.m */; };
 		3874DB061AA3E92000259C0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB051AA3E92000259C0F /* AppDelegate.m */; };
 		3874DB091AA3E92000259C0F /* JKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB081AA3E92000259C0F /* JKLandingViewController.m */; };
@@ -36,6 +40,11 @@
 		386D6D3E1AAB687C00131328 /* FadingBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingBackgroundViewController.m; sourceTree = "<group>"; };
 		386D6D411AAB694C00131328 /* FadedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadedView.h; sourceTree = "<group>"; };
 		386D6D421AAB694C00131328 /* FadedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadedView.m; sourceTree = "<group>"; };
+		386D6D451AAB6B3000131328 /* movingManSprite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = movingManSprite.jpg; sourceTree = "<group>"; };
+		386D6D471AAB6B5600131328 /* AnimatedImageDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedImageDemoViewController.h; sourceTree = "<group>"; };
+		386D6D481AAB6B5600131328 /* AnimatedImageDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedImageDemoViewController.m; sourceTree = "<group>"; };
+		386D6D4A1AAB6EBE00131328 /* spriteAnimationRunning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spriteAnimationRunning.png; sourceTree = "<group>"; };
+		386D6D4C1AAB70F200131328 /* smurf_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smurf_sprite.png; sourceTree = "<group>"; };
 		3874DAFD1AA3E92000259C0F /* JKAnimationDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKAnimationDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3874DB011AA3E92000259C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3874DB021AA3E92000259C0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +87,16 @@
 			name = "Views Collection";
 			sourceTree = "<group>";
 		};
+		386D6D441AAB6B0700131328 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				386D6D451AAB6B3000131328 /* movingManSprite.jpg */,
+				386D6D4C1AAB70F200131328 /* smurf_sprite.png */,
+				386D6D4A1AAB6EBE00131328 /* spriteAnimationRunning.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		3874DAF41AA3E92000259C0F = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +118,7 @@
 		3874DAFF1AA3E92000259C0F /* JKAnimationDemos */ = {
 			isa = PBXGroup;
 			children = (
+				386D6D441AAB6B0700131328 /* Images */,
 				386D6D401AAB693600131328 /* Views Collection */,
 				3874DB271AA3E98100259C0F /* Animation Demo ViewControllers */,
 				3874DB261AA3E97600259C0F /* Storyboard */,
@@ -154,6 +174,8 @@
 				3849D2F11AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m */,
 				386D6D3D1AAB687C00131328 /* FadingBackgroundViewController.h */,
 				386D6D3E1AAB687C00131328 /* FadingBackgroundViewController.m */,
+				386D6D471AAB6B5600131328 /* AnimatedImageDemoViewController.h */,
+				386D6D481AAB6B5600131328 /* AnimatedImageDemoViewController.m */,
 			);
 			name = "Animation Demo ViewControllers";
 			sourceTree = "<group>";
@@ -239,7 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3874DB0C1AA3E92000259C0F /* Main.storyboard in Resources */,
+				386D6D461AAB6B3000131328 /* movingManSprite.jpg in Resources */,
+				386D6D4B1AAB6EBE00131328 /* spriteAnimationRunning.png in Resources */,
 				3874DB111AA3E92000259C0F /* LaunchScreen.xib in Resources */,
+				386D6D4D1AAB70F200131328 /* smurf_sprite.png in Resources */,
 				3874DB0E1AA3E92000259C0F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +287,7 @@
 				3849D2F21AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m in Sources */,
 				3874DB061AA3E92000259C0F /* AppDelegate.m in Sources */,
 				386D6D431AAB694C00131328 /* FadedView.m in Sources */,
+				386D6D491AAB6B5600131328 /* AnimatedImageDemoViewController.m in Sources */,
 				386D6D3F1AAB687C00131328 /* FadingBackgroundViewController.m in Sources */,
 				3874DB031AA3E92000259C0F /* main.m in Sources */,
 			);
