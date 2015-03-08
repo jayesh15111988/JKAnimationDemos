@@ -587,5 +587,57 @@
             </objects>
             <point key="canvasLocation" x="2890" y="587"/>
         </scene>
+        <!--Complex Bezier Path Trail Demo View Controller-->
+        <scene sceneID="x2b-ke-qWB">
+            <objects>
+                <viewController storyboardIdentifier="beziermovement" id="L8O-xB-KxT" customClass="ComplexBezierPathTrailDemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UwS-2l-JXb"/>
+                        <viewControllerLayoutGuide type="bottom" id="bAi-D0-dIe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RdM-pu-EPB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="changeColor.png" translatesAutoresizingMaskIntoConstraints="NO" id="ptI-yc-vQ9">
+                                <rect key="frame" x="20" y="310" width="280" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="q7E-lz-t5a"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iay-Ex-fS0">
+                                <rect key="frame" x="110" y="272" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8iE-BF-cJC"/>
+                                </constraints>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeImageButtonPressed:" destination="L8O-xB-KxT" eventType="touchUpInside" id="gnS-bk-eNH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ptI-yc-vQ9" secondAttribute="trailing" constant="4" id="MLV-DW-JBR"/>
+                            <constraint firstItem="ptI-yc-vQ9" firstAttribute="leading" secondItem="RdM-pu-EPB" secondAttribute="leadingMargin" constant="4" id="RwS-gZ-px9"/>
+                            <constraint firstAttribute="centerX" secondItem="iay-Ex-fS0" secondAttribute="centerX" id="ZlT-bE-b4J"/>
+                            <constraint firstItem="ptI-yc-vQ9" firstAttribute="top" secondItem="iay-Ex-fS0" secondAttribute="bottom" constant="8" id="dfH-Qx-iAj"/>
+                            <constraint firstItem="bAi-D0-dIe" firstAttribute="top" secondItem="ptI-yc-vQ9" secondAttribute="bottom" constant="20" id="ieD-UY-Brf"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="animatingImageView" destination="ptI-yc-vQ9" id="Hmc-tX-vpO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJ0-rc-nhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3276" y="587"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="changeColor.png" width="128" height="128"/>
+    </resources>
 </document>
