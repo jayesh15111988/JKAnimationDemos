@@ -12,6 +12,7 @@
 #import "AnimatedImageDemoViewController.h"
 #import "BezierCurveArtViewController.h"
 #import "TDCubeLayerViewController.h"
+#import "ReplicatorLayerViewController.h"
 
 @interface JKLandingViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -23,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Core Animation Demos";
-    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube"];
+    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Replication Layer"];
     [self.tableView reloadData];
 }
 
@@ -53,6 +54,9 @@
     } else if (indexPath.row == 4) {
         TDCubeLayerViewController* cubeViewCotroller = (TDCubeLayerViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"3dcube"];
         [self.navigationController pushViewController:cubeViewCotroller animated:YES];
+    } else if (indexPath.row == 5) {
+        ReplicatorLayerViewController* replicateLayerViewController = (ReplicatorLayerViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"replicator"];
+        [self.navigationController pushViewController:replicateLayerViewController animated:YES];
     }
 }
 

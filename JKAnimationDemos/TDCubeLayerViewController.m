@@ -192,7 +192,7 @@
 }
 
 - (IBAction)translationDirectionSwitchChanged:(UISwitch *)sender {
-    self.translationDirectionLabel.text = sender.isOn ? @"Right" : @"Left";
+    self.translationDirectionLabel.text = sender.isOn ? @"Forward" : @"Backward";
     self.translationDirectionToggle *= -1;
 }
 

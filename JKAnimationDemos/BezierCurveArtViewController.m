@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Bezier Curves Demo";
     UIBezierPath* path = [[UIBezierPath alloc] init];
     CGFloat containerOneCenterX = self.containerOne.center.x - MAN_IMAGE_HEAD_RADIUS;
     //[path moveToPoint:CGPointMake(containerOneCenterX, 10)];
