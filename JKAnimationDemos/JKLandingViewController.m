@@ -17,6 +17,7 @@
 #import "VideoPlaybackAndEditViewController.h"
 #import "SimpleAnimationDemoViewController.h"
 #import "ComplexBezierPathTrailDemoViewController.h"
+#import "CustomTransitionViewController.h"
 
 @interface JKLandingViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -28,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Core Animation Demos";
-    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Replication Layer", @"Emitter Layer", @"Video Playback", @"Animation Demo", @"Bezier Movement"];
+    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Replication Layer", @"Emitter Layer", @"Video Playback", @"Animation Demo", @"Bezier Movement", @"Custom Transition"];
     [self.tableView reloadData];
 }
 
@@ -73,6 +74,9 @@
     } else if (indexPath.row == 9) {
         ComplexBezierPathTrailDemoViewController* bezierPathMovement = (ComplexBezierPathTrailDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"beziermovement"];
         [self.navigationController pushViewController:bezierPathMovement animated:YES];
+    } else if (indexPath.row == 10) {
+        CustomTransitionViewController* customTransitionViewController = (CustomTransitionViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"customtransition"];
+        [self.navigationController pushViewController:customTransitionViewController animated:YES];
     }
 }
 

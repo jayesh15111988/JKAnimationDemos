@@ -24,6 +24,8 @@
 		386D6D651AABE2CA00131328 /* animationVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D611AABDF6F00131328 /* animationVideo.mp4 */; };
 		386D6D681AABEC6400131328 /* SimpleAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D671AABEC6400131328 /* SimpleAnimationDemoViewController.m */; };
 		386D6D6B1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D6A1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m */; };
+		386D6D6E1AACFD2B00131328 /* CustomTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D6D1AACFD2B00131328 /* CustomTransitionViewController.m */; };
+		386D6D711AAD071F00131328 /* UIImage+Cropped.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D701AAD071F00131328 /* UIImage+Cropped.m */; };
 		3874DB031AA3E92000259C0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB021AA3E92000259C0F /* main.m */; };
 		3874DB061AA3E92000259C0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB051AA3E92000259C0F /* AppDelegate.m */; };
 		3874DB091AA3E92000259C0F /* JKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB081AA3E92000259C0F /* JKLandingViewController.m */; };
@@ -72,6 +74,10 @@
 		386D6D671AABEC6400131328 /* SimpleAnimationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAnimationDemoViewController.m; sourceTree = "<group>"; };
 		386D6D691AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplexBezierPathTrailDemoViewController.h; sourceTree = "<group>"; };
 		386D6D6A1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplexBezierPathTrailDemoViewController.m; sourceTree = "<group>"; };
+		386D6D6C1AACFD2B00131328 /* CustomTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTransitionViewController.h; sourceTree = "<group>"; };
+		386D6D6D1AACFD2B00131328 /* CustomTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionViewController.m; sourceTree = "<group>"; };
+		386D6D6F1AAD071F00131328 /* UIImage+Cropped.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cropped.h"; sourceTree = "<group>"; };
+		386D6D701AAD071F00131328 /* UIImage+Cropped.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cropped.m"; sourceTree = "<group>"; };
 		3874DAFD1AA3E92000259C0F /* JKAnimationDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKAnimationDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3874DB011AA3E92000259C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3874DB021AA3E92000259C0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -134,6 +140,15 @@
 			name = Video;
 			sourceTree = "<group>";
 		};
+		386D6D721AAD072600131328 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				386D6D6F1AAD071F00131328 /* UIImage+Cropped.h */,
+				386D6D701AAD071F00131328 /* UIImage+Cropped.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		3874DAF41AA3E92000259C0F = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +170,7 @@
 		3874DAFF1AA3E92000259C0F /* JKAnimationDemos */ = {
 			isa = PBXGroup;
 			children = (
+				386D6D721AAD072600131328 /* Categories */,
 				386D6D601AABDF6500131328 /* Video */,
 				386D6D441AAB6B0700131328 /* Images */,
 				386D6D401AAB693600131328 /* Views Collection */,
@@ -228,6 +244,8 @@
 				386D6D671AABEC6400131328 /* SimpleAnimationDemoViewController.m */,
 				386D6D691AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.h */,
 				386D6D6A1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m */,
+				386D6D6C1AACFD2B00131328 /* CustomTransitionViewController.h */,
+				386D6D6D1AACFD2B00131328 /* CustomTransitionViewController.m */,
 			);
 			name = "Animation Demo ViewControllers";
 			sourceTree = "<group>";
@@ -343,10 +361,12 @@
 				3849D2F21AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m in Sources */,
 				386D6D531AAB7C3700131328 /* TDCubeLayerViewController.m in Sources */,
 				3874DB061AA3E92000259C0F /* AppDelegate.m in Sources */,
+				386D6D711AAD071F00131328 /* UIImage+Cropped.m in Sources */,
 				386D6D6B1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m in Sources */,
 				386D6D431AAB694C00131328 /* FadedView.m in Sources */,
 				386D6D491AAB6B5600131328 /* AnimatedImageDemoViewController.m in Sources */,
 				386D6D501AAB727900131328 /* BezierCurveArtViewController.m in Sources */,
+				386D6D6E1AACFD2B00131328 /* CustomTransitionViewController.m in Sources */,
 				386D6D681AABEC6400131328 /* SimpleAnimationDemoViewController.m in Sources */,
 				386D6D5B1AABD9D000131328 /* EmitterDemoViewController.m in Sources */,
 				386D6D561AABCC0000131328 /* ReplicatorLayerViewController.m in Sources */,

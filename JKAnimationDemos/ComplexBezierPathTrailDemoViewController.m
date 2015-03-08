@@ -54,11 +54,6 @@
     animationGroup.animations = @[colorChangeAnimation, animation, rotationAnimation];
     animationGroup.duration = 1.0f;
     [layer addAnimation:animationGroup forKey:nil];
-    [self setAnimationForImageView];
-}
-
--(void)setAnimationForImageView {
-
 }
 
 - (IBAction)changeImageButtonPressed:(id)sender {
@@ -66,8 +61,14 @@
     self.imageViewTransition.type = kCATransitionPush;
     self.imageViewTransition.subtype = kCATransitionFromRight;
     self.imageViewTransition.duration = 0.5f;
-    [self.animatingImageView.layer addAnimation:self.imageViewTransition forKey:@"transition"];
+    [self.animatingImageView.layer addAnimation:self.imageViewTransition forKey:kCATransition];
     self.animatingImageView.image = [UIImage imageNamed:@"spriteAnimationRunning.png"];
+    
+    [UIView transitionWithView:self.animatingImageView duration:1.0 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+            //self.animatingImageView.image = [UIImage imageNamed:@"spriteAnimationRunning.png"];
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 

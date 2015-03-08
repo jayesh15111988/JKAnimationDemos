@@ -636,8 +636,44 @@
             </objects>
             <point key="canvasLocation" x="3276" y="587"/>
         </scene>
+        <!--Custom Transition View Controller-->
+        <scene sceneID="psS-JS-cDC">
+            <objects>
+                <viewController storyboardIdentifier="customtransition" id="M7S-xK-qZ3" customClass="CustomTransitionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3hE-9Q-4GP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xx9-56-gEz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3K6-z1-hdL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spriteAnimationRunning.png" translatesAutoresizingMaskIntoConstraints="NO" id="8vh-RJ-u22">
+                                <rect key="frame" x="0.0" y="100" width="320" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="9nV-od-mfF"/>
+                                    <constraint firstAttribute="width" constant="320" id="hrd-Pa-faN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="8vh-RJ-u22" secondAttribute="centerX" id="YNI-CF-Co2"/>
+                            <constraint firstAttribute="centerY" secondItem="8vh-RJ-u22" secondAttribute="centerY" id="oG4-vJ-mLM"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="centerImageView" destination="8vh-RJ-u22" id="GlX-3Z-OLh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dw6-xL-i6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3672" y="587"/>
+        </scene>
     </scenes>
     <resources>
         <image name="changeColor.png" width="128" height="128"/>
+        <image name="spriteAnimationRunning.png" width="256" height="256"/>
     </resources>
 </document>
