@@ -22,6 +22,7 @@
 		386D6D5F1AABDE0800131328 /* redDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D5E1AABDE0800131328 /* redDot.png */; };
 		386D6D641AABE04F00131328 /* VideoPlaybackAndEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D631AABE04F00131328 /* VideoPlaybackAndEditViewController.m */; };
 		386D6D651AABE2CA00131328 /* animationVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D611AABDF6F00131328 /* animationVideo.mp4 */; };
+		386D6D681AABEC6400131328 /* SimpleAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D671AABEC6400131328 /* SimpleAnimationDemoViewController.m */; };
 		3874DB031AA3E92000259C0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB021AA3E92000259C0F /* main.m */; };
 		3874DB061AA3E92000259C0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB051AA3E92000259C0F /* AppDelegate.m */; };
 		3874DB091AA3E92000259C0F /* JKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB081AA3E92000259C0F /* JKLandingViewController.m */; };
@@ -66,6 +67,8 @@
 		386D6D611AABDF6F00131328 /* animationVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = animationVideo.mp4; sourceTree = "<group>"; };
 		386D6D621AABE04F00131328 /* VideoPlaybackAndEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackAndEditViewController.h; sourceTree = "<group>"; };
 		386D6D631AABE04F00131328 /* VideoPlaybackAndEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlaybackAndEditViewController.m; sourceTree = "<group>"; };
+		386D6D661AABEC6400131328 /* SimpleAnimationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAnimationDemoViewController.h; sourceTree = "<group>"; };
+		386D6D671AABEC6400131328 /* SimpleAnimationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAnimationDemoViewController.m; sourceTree = "<group>"; };
 		3874DAFD1AA3E92000259C0F /* JKAnimationDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKAnimationDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3874DB011AA3E92000259C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3874DB021AA3E92000259C0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 				386D6D5A1AABD9D000131328 /* EmitterDemoViewController.m */,
 				386D6D621AABE04F00131328 /* VideoPlaybackAndEditViewController.h */,
 				386D6D631AABE04F00131328 /* VideoPlaybackAndEditViewController.m */,
+				386D6D661AABEC6400131328 /* SimpleAnimationDemoViewController.h */,
+				386D6D671AABEC6400131328 /* SimpleAnimationDemoViewController.m */,
 			);
 			name = "Animation Demo ViewControllers";
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				386D6D431AAB694C00131328 /* FadedView.m in Sources */,
 				386D6D491AAB6B5600131328 /* AnimatedImageDemoViewController.m in Sources */,
 				386D6D501AAB727900131328 /* BezierCurveArtViewController.m in Sources */,
+				386D6D681AABEC6400131328 /* SimpleAnimationDemoViewController.m in Sources */,
 				386D6D5B1AABD9D000131328 /* EmitterDemoViewController.m in Sources */,
 				386D6D561AABCC0000131328 /* ReplicatorLayerViewController.m in Sources */,
 				386D6D3F1AAB687C00131328 /* FadingBackgroundViewController.m in Sources */,
