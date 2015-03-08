@@ -235,7 +235,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="Ji3-k8-dF3"/>
                                 </constraints>
-                                <state key="normal" title="Transform X">
+                                <state key="normal" title="Rotate X">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -244,7 +244,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNb-0u-pYg">
                                 <rect key="frame" x="115" y="30" width="90" height="30"/>
-                                <state key="normal" title="Transform Y">
+                                <state key="normal" title="Rotate Y">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -253,7 +253,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-A2-yHL">
                                 <rect key="frame" x="220" y="30" width="90" height="30"/>
-                                <state key="normal" title="Transform Z">
+                                <state key="normal" title="Rotate Z">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -416,6 +416,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Lt-Ma-ZNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1722" y="587"/>
+        </scene>
+        <!--Emitter Demo View Controller-->
+        <scene sceneID="gas-sC-slf">
+            <objects>
+                <viewController storyboardIdentifier="emitter" id="7rg-V8-DKn" customClass="EmitterDemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W57-Xh-7mK"/>
+                        <viewControllerLayoutGuide type="bottom" id="0zw-L0-3mS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qzj-RZ-bhG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eU2-yR-rUg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0zw-L0-3mS" firstAttribute="top" secondItem="eU2-yR-rUg" secondAttribute="bottom" id="7IE-ic-WYf"/>
+                            <constraint firstItem="eU2-yR-rUg" firstAttribute="leading" secondItem="qzj-RZ-bhG" secondAttribute="leadingMargin" constant="-16" id="92w-7b-0Bq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eU2-yR-rUg" secondAttribute="trailing" constant="-16" id="Xxn-UX-2rE"/>
+                            <constraint firstItem="eU2-yR-rUg" firstAttribute="top" secondItem="qzj-RZ-bhG" secondAttribute="topMargin" id="njc-NX-HFb"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="containerView" destination="eU2-yR-rUg" id="Csf-Qy-Anv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKG-61-9Ej" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098" y="587"/>
+        </scene>
+        <!--Video Playback And Edit View Controller-->
+        <scene sceneID="JUY-dG-xyD">
+            <objects>
+                <viewController storyboardIdentifier="video" id="2ex-r0-DUL" customClass="VideoPlaybackAndEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eDi-fD-5ar"/>
+                        <viewControllerLayoutGuide type="bottom" id="5xr-NF-Tiw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OdC-4W-oQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAB-Cd-BxZ">
+                                <rect key="frame" x="0.0" y="140" width="320" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Il8-yD-cXh"/>
+                                    <constraint firstAttribute="height" constant="200" id="NNr-rs-KZU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="dAB-Cd-BxZ" secondAttribute="centerY" id="B2P-GK-jKI"/>
+                            <constraint firstAttribute="centerX" secondItem="dAB-Cd-BxZ" secondAttribute="centerX" id="Rwh-b7-uuJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="videoContainerView" destination="dAB-Cd-BxZ" id="M4K-v8-U6n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hut-11-8G9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2490" y="587"/>
         </scene>
     </scenes>
 </document>

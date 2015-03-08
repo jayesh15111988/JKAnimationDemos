@@ -13,6 +13,8 @@
 #import "BezierCurveArtViewController.h"
 #import "TDCubeLayerViewController.h"
 #import "ReplicatorLayerViewController.h"
+#import "EmitterDemoViewController.h"
+#import "VideoPlaybackAndEditViewController.h"
 
 @interface JKLandingViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -24,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Core Animation Demos";
-    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Replication Layer"];
+    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Replication Layer", @"Emitter Layer", @"Video Playback"];
     [self.tableView reloadData];
 }
 
@@ -57,6 +59,12 @@
     } else if (indexPath.row == 5) {
         ReplicatorLayerViewController* replicateLayerViewController = (ReplicatorLayerViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"replicator"];
         [self.navigationController pushViewController:replicateLayerViewController animated:YES];
+    } else if (indexPath.row == 6) {
+        EmitterDemoViewController* emitterViewController = (EmitterDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"emitter"];
+        [self.navigationController pushViewController:emitterViewController animated:YES];
+    } else if (indexPath.row == 7) {
+        VideoPlaybackAndEditViewController* videoDemoViewControlelr = (VideoPlaybackAndEditViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"video"];
+        [self.navigationController pushViewController:videoDemoViewControlelr animated:YES];
     }
 }
 

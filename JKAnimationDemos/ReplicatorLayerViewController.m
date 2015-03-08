@@ -7,7 +7,6 @@
 //
 
 #import "ReplicatorLayerViewController.h"
-#import <QuartzCore/QuartzCore.h>
 
 #define VIEW_SIZE 100
 @interface ReplicatorLayerViewController ()
@@ -18,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Replicator Demo";
     CAReplicatorLayer* replicatorLayer = [CAReplicatorLayer layer];
     replicatorLayer.frame = self.containerView.bounds;
     replicatorLayer.instanceCount = 2.0f;

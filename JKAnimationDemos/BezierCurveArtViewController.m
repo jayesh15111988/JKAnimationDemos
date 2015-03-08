@@ -7,7 +7,6 @@
 //
 
 #import "BezierCurveArtViewController.h"
-#import <QuartzCore/QuartzCore.h>
 #define MAN_IMAGE_HEAD_RADIUS 20
 #define CUSOTM_REACTANGLE_WIDTH 300
 

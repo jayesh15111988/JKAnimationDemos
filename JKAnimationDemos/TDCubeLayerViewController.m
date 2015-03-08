@@ -7,7 +7,6 @@
 //
 
 #import "TDCubeLayerViewController.h"
-#import <QuartzCore/QuartzCore.h>
 #define ROTATION_ANGLE_INCREMENT_FACTOR 10
 #define MAXIMUM_ROTATION_ANGLE_VALUE 360
 #define TRANSLATE_DISTANCE_INCREMENT_FACTOR 5
