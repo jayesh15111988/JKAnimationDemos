@@ -18,6 +18,7 @@
 #import "SimpleAnimationDemoViewController.h"
 #import "ComplexBezierPathTrailDemoViewController.h"
 #import "CustomTransitionViewController.h"
+#import "MediaTimingFunctionsViewController.h"
 
 @interface JKLandingViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -29,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Core Animation Demos";
-    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Replication Layer", @"Emitter Layer", @"Video Playback", @"Animation Demo", @"Bezier Movement", @"Custom Transition"];
+    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Replication Layer", @"Emitter Layer", @"Video Playback", @"Animation Demo", @"Bezier Movement", @"Custom Transition", @"Media Timings"];
     [self.tableView reloadData];
 }
 
@@ -77,6 +78,9 @@
     } else if (indexPath.row == 10) {
         CustomTransitionViewController* customTransitionViewController = (CustomTransitionViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"customtransition"];
         [self.navigationController pushViewController:customTransitionViewController animated:YES];
+    } else if (indexPath.row == 11) {
+        MediaTimingFunctionsViewController* mediaTimingViewCotroller = (MediaTimingFunctionsViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"mediatiming"];
+        [self.navigationController pushViewController:mediaTimingViewCotroller animated:YES];
     }
 }
 

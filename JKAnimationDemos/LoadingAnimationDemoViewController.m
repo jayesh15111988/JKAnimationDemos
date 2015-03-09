@@ -67,8 +67,9 @@
         self.circle.fillColor = [UIColor clearColor].CGColor;
         self.circle.strokeColor = [UIColor blackColor].CGColor;
         self.circle.lineWidth = 10;
-        self.circle.strokeStart = 0.0;
-        self.circle.strokeEnd = 1.0;
+        //self.circle.strokeStart = 0.0;
+        //self.circle.strokeEnd = 0.0;
+        self.circle.fillMode = kCAFillModeBoth;
         
         // Add to parent layer
         [self.view.layer addSublayer: self.circle];
@@ -77,7 +78,6 @@
         self.drawAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
         self.drawAnimation.duration            = DEFAULT_ANIMATION_DURATION;
         self.drawAnimation.repeatCount         = 1.0;
-        self.drawAnimation.removedOnCompletion = YES;
         
         // Animate from no part of the stroke being drawn to the entire stroke being drawn
         self.drawAnimation.fromValue = [NSNumber numberWithFloat:self.previousProgressIndicator];
@@ -99,6 +99,7 @@
     if(self.progressIndicator <= 1.0) {
         self.drawAnimation.fromValue   = [NSNumber numberWithFloat:self.previousProgressIndicator];
         self.drawAnimation.toValue   = [NSNumber numberWithFloat:self.progressIndicator];
+        NSLog(@"%f Stroke End Value is", self.progressIndicator);
         [self.circle addAnimation:self.drawAnimation forKey:UNIQUE_ANIMATION_KEY];
         self.previousProgressIndicator = self.progressIndicator;
         self.progressIndicator += 0.05;

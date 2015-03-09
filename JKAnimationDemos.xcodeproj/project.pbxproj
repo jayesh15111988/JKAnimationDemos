@@ -26,6 +26,7 @@
 		386D6D6B1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D6A1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m */; };
 		386D6D6E1AACFD2B00131328 /* CustomTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D6D1AACFD2B00131328 /* CustomTransitionViewController.m */; };
 		386D6D711AAD071F00131328 /* UIImage+Cropped.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D701AAD071F00131328 /* UIImage+Cropped.m */; };
+		386D6D751AAD089400131328 /* MediaTimingFunctionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D741AAD089400131328 /* MediaTimingFunctionsViewController.m */; };
 		3874DB031AA3E92000259C0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB021AA3E92000259C0F /* main.m */; };
 		3874DB061AA3E92000259C0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB051AA3E92000259C0F /* AppDelegate.m */; };
 		3874DB091AA3E92000259C0F /* JKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB081AA3E92000259C0F /* JKLandingViewController.m */; };
@@ -78,6 +79,8 @@
 		386D6D6D1AACFD2B00131328 /* CustomTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionViewController.m; sourceTree = "<group>"; };
 		386D6D6F1AAD071F00131328 /* UIImage+Cropped.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cropped.h"; sourceTree = "<group>"; };
 		386D6D701AAD071F00131328 /* UIImage+Cropped.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cropped.m"; sourceTree = "<group>"; };
+		386D6D731AAD089400131328 /* MediaTimingFunctionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTimingFunctionsViewController.h; sourceTree = "<group>"; };
+		386D6D741AAD089400131328 /* MediaTimingFunctionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTimingFunctionsViewController.m; sourceTree = "<group>"; };
 		3874DAFD1AA3E92000259C0F /* JKAnimationDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKAnimationDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3874DB011AA3E92000259C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3874DB021AA3E92000259C0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				386D6D6A1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m */,
 				386D6D6C1AACFD2B00131328 /* CustomTransitionViewController.h */,
 				386D6D6D1AACFD2B00131328 /* CustomTransitionViewController.m */,
+				386D6D731AAD089400131328 /* MediaTimingFunctionsViewController.h */,
+				386D6D741AAD089400131328 /* MediaTimingFunctionsViewController.m */,
 			);
 			name = "Animation Demo ViewControllers";
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386D6D751AAD089400131328 /* MediaTimingFunctionsViewController.m in Sources */,
 				3874DB091AA3E92000259C0F /* JKLandingViewController.m in Sources */,
 				386D6D641AABE04F00131328 /* VideoPlaybackAndEditViewController.m in Sources */,
 				3849D2F21AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m in Sources */,

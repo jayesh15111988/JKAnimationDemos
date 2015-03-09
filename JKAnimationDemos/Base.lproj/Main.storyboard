@@ -671,6 +671,44 @@
             </objects>
             <point key="canvasLocation" x="3672" y="587"/>
         </scene>
+        <!--Media Timing Functions View Controller-->
+        <scene sceneID="0gE-Yv-j93">
+            <objects>
+                <viewController storyboardIdentifier="mediatiming" id="Hv0-fJ-ozv" customClass="MediaTimingFunctionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xxN-gz-tGT"/>
+                        <viewControllerLayoutGuide type="bottom" id="ObN-Z6-bZ1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="03U-kD-OAK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYo-kg-3sd">
+                                <rect key="frame" x="110" y="125" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7xM-6s-RKE"/>
+                                    <constraint firstAttribute="height" constant="30" id="nwF-3x-Iok"/>
+                                </constraints>
+                                <state key="normal" title="Step">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="Hv0-fJ-ozv" eventType="touchUpInside" id="h4Z-2q-4ry"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jYo-kg-3sd" secondAttribute="centerX" id="Wne-YR-nw3"/>
+                            <constraint firstItem="jYo-kg-3sd" firstAttribute="top" secondItem="xxN-gz-tGT" secondAttribute="bottom" constant="105" id="bmR-O7-e2p"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iyi-aS-Dyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4058" y="587"/>
+        </scene>
     </scenes>
     <resources>
         <image name="changeColor.png" width="128" height="128"/>
