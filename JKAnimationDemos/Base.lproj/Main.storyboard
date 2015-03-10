@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nhg-1X-ueY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nhg-1X-ueY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -273,7 +273,7 @@
                                     <constraint firstAttribute="width" constant="95" id="oTF-yS-mwz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forward" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRE-sb-o8O">
@@ -282,7 +282,7 @@
                                     <constraint firstAttribute="width" constant="75" id="6tA-kS-j7N"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lg-w6-Z8W">
@@ -696,11 +696,24 @@
                                     <action selector="pauseButtonPressed:" destination="Hv0-fJ-ozv" eventType="touchUpInside" id="h4Z-2q-4ry"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0U-dI-2hv">
+                                <rect key="frame" x="110" y="225" width="100" height="30"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateWithEase:" destination="Hv0-fJ-ozv" eventType="touchUpInside" id="lhJ-ae-pyk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="r0U-dI-2hv" firstAttribute="top" secondItem="jYo-kg-3sd" secondAttribute="bottom" constant="70" id="BER-EB-vEu"/>
+                            <constraint firstItem="r0U-dI-2hv" firstAttribute="trailing" secondItem="jYo-kg-3sd" secondAttribute="trailing" id="NZU-Qa-fbq"/>
                             <constraint firstAttribute="centerX" secondItem="jYo-kg-3sd" secondAttribute="centerX" id="Wne-YR-nw3"/>
                             <constraint firstItem="jYo-kg-3sd" firstAttribute="top" secondItem="xxN-gz-tGT" secondAttribute="bottom" constant="105" id="bmR-O7-e2p"/>
+                            <constraint firstItem="r0U-dI-2hv" firstAttribute="leading" secondItem="jYo-kg-3sd" secondAttribute="leading" id="fXZ-Dc-DiW"/>
+                            <constraint firstItem="r0U-dI-2hv" firstAttribute="height" secondItem="jYo-kg-3sd" secondAttribute="height" id="ueH-pr-Rb1"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -708,6 +721,111 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iyi-aS-Dyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4058" y="587"/>
+        </scene>
+        <!--Bezier Curve From Timing Functions View Controller-->
+        <scene sceneID="rUV-oE-HmJ">
+            <objects>
+                <viewController storyboardIdentifier="bezierfromtiming" id="uZD-Bk-ofV" customClass="BezierCurveFromTimingFunctionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G3j-pp-V0k"/>
+                        <viewControllerLayoutGuide type="bottom" id="LXm-mg-fi3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HU0-fz-sDP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqm-tI-vRa">
+                                <rect key="frame" x="45" y="392" width="100" height="30"/>
+                                <state key="normal" title="EaseIn">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="easeIn:" destination="uZD-Bk-ofV" eventType="touchUpInside" id="2yZ-IQ-4eX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXf-T9-WUp">
+                                <rect key="frame" x="175" y="354" width="100" height="30"/>
+                                <state key="normal" title="Linear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="linear:" destination="uZD-Bk-ofV" eventType="touchUpInside" id="a4a-0U-Ku7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEg-14-4f9">
+                                <rect key="frame" x="85" y="430" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7wp-mG-1Vq"/>
+                                    <constraint firstAttribute="width" constant="150" id="cfe-A6-arD"/>
+                                </constraints>
+                                <state key="normal" title="EaseInEaseOut">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="easeInEaseOut:" destination="uZD-Bk-ofV" eventType="touchUpInside" id="Nfv-aj-mFf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6n-Fp-cm8">
+                                <rect key="frame" x="175" y="392" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aNk-vf-f51"/>
+                                    <constraint firstAttribute="width" constant="100" id="dpP-BB-tUA"/>
+                                </constraints>
+                                <state key="normal" title="Default">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="defaultCurve:" destination="uZD-Bk-ofV" eventType="touchUpInside" id="cVD-4g-God"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPm-ek-095">
+                                <rect key="frame" x="45" y="354" width="100" height="30"/>
+                                <state key="normal" title="EaseOut">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="easeOut:" destination="uZD-Bk-ofV" eventType="touchUpInside" id="x7y-md-i33"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psl-7K-Ihw">
+                                <rect key="frame" x="60" y="140" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ko4-4F-d43"/>
+                                    <constraint firstAttribute="height" constant="200" id="Tu3-f2-0SS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YXf-T9-WUp" firstAttribute="height" secondItem="z6n-Fp-cm8" secondAttribute="height" id="8QG-Qd-0ke"/>
+                            <constraint firstItem="Uqm-tI-vRa" firstAttribute="bottom" secondItem="z6n-Fp-cm8" secondAttribute="bottom" id="DfQ-3a-c1J"/>
+                            <constraint firstItem="YXf-T9-WUp" firstAttribute="trailing" secondItem="z6n-Fp-cm8" secondAttribute="trailing" id="Jtp-aX-w9X"/>
+                            <constraint firstAttribute="centerX" secondItem="psl-7K-Ihw" secondAttribute="centerX" id="N8R-ED-3go"/>
+                            <constraint firstAttribute="centerY" secondItem="psl-7K-Ihw" secondAttribute="centerY" id="NGM-ay-b6C"/>
+                            <constraint firstItem="Uqm-tI-vRa" firstAttribute="top" secondItem="z6n-Fp-cm8" secondAttribute="top" id="NfQ-KM-Spk"/>
+                            <constraint firstItem="Uqm-tI-vRa" firstAttribute="leading" secondItem="qPm-ek-095" secondAttribute="leading" id="U4A-iw-RjR"/>
+                            <constraint firstItem="YXf-T9-WUp" firstAttribute="top" secondItem="qPm-ek-095" secondAttribute="top" id="VCu-02-bJ7"/>
+                            <constraint firstItem="YXf-T9-WUp" firstAttribute="bottom" secondItem="qPm-ek-095" secondAttribute="bottom" id="VyV-1W-SYF"/>
+                            <constraint firstItem="Uqm-tI-vRa" firstAttribute="trailing" secondItem="qPm-ek-095" secondAttribute="trailing" id="YaK-3b-XeP"/>
+                            <constraint firstItem="z6n-Fp-cm8" firstAttribute="top" secondItem="YXf-T9-WUp" secondAttribute="bottom" constant="8" id="aXx-Wi-0H4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z6n-Fp-cm8" secondAttribute="trailing" constant="29" id="bpf-8z-Fkl"/>
+                            <constraint firstItem="LXm-mg-fi3" firstAttribute="top" secondItem="fEg-14-4f9" secondAttribute="bottom" constant="20" id="l3g-r7-wVK"/>
+                            <constraint firstAttribute="centerX" secondItem="fEg-14-4f9" secondAttribute="centerX" id="lxu-1I-mJo"/>
+                            <constraint firstItem="fEg-14-4f9" firstAttribute="top" secondItem="z6n-Fp-cm8" secondAttribute="bottom" constant="8" id="pmT-sW-Kjb"/>
+                            <constraint firstItem="YXf-T9-WUp" firstAttribute="leading" secondItem="z6n-Fp-cm8" secondAttribute="leading" id="rNf-wO-zwr"/>
+                            <constraint firstItem="Uqm-tI-vRa" firstAttribute="width" secondItem="z6n-Fp-cm8" secondAttribute="width" id="uau-Ic-2jO"/>
+                            <constraint firstItem="Uqm-tI-vRa" firstAttribute="leading" secondItem="HU0-fz-sDP" secondAttribute="leadingMargin" constant="29" id="v7g-pd-Stf"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="timingFunctionsBezierCurve" destination="psl-7K-Ihw" id="iXd-wi-IrM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxn-lG-OXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4449" y="587"/>
         </scene>
     </scenes>
     <resources>

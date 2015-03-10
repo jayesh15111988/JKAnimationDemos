@@ -53,6 +53,7 @@
     CAAnimationGroup* animationGroup = [CAAnimationGroup animation];
     animationGroup.animations = @[colorChangeAnimation, animation, rotationAnimation];
     animationGroup.duration = 1.0f;
+    animationGroup.autoreverses = YES;
     [layer addAnimation:animationGroup forKey:nil];
 }
 
@@ -60,15 +61,16 @@
     self.imageViewTransition = [CATransition animation];
     self.imageViewTransition.type = kCATransitionPush;
     self.imageViewTransition.subtype = kCATransitionFromRight;
-    self.imageViewTransition.duration = 0.5f;
+    self.imageViewTransition.duration = 1.0f;
     [self.animatingImageView.layer addAnimation:self.imageViewTransition forKey:kCATransition];
     self.animatingImageView.image = [UIImage imageNamed:@"spriteAnimationRunning.png"];
     
-    [UIView transitionWithView:self.animatingImageView duration:1.0 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+    //Use this if opting for alternate transition effect
+    /*[UIView transitionWithView:self.animatingImageView duration:1.0 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
             //self.animatingImageView.image = [UIImage imageNamed:@"spriteAnimationRunning.png"];
     } completion:^(BOOL finished) {
         
-    }];
+    }];*/
 }
 
 

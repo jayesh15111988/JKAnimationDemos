@@ -34,6 +34,7 @@
 		3874DB0E1AA3E92000259C0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3874DB0D1AA3E92000259C0F /* Images.xcassets */; };
 		3874DB111AA3E92000259C0F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3874DB0F1AA3E92000259C0F /* LaunchScreen.xib */; };
 		3874DB1D1AA3E92000259C0F /* JKAnimationDemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB1C1AA3E92000259C0F /* JKAnimationDemosTests.m */; };
+		38FED4371AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		3874DB161AA3E92000259C0F /* JKAnimationDemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKAnimationDemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3874DB1B1AA3E92000259C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3874DB1C1AA3E92000259C0F /* JKAnimationDemosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKAnimationDemosTests.m; sourceTree = "<group>"; };
+		38FED4351AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurveFromTimingFunctionsViewController.h; sourceTree = "<group>"; };
+		38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurveFromTimingFunctionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +254,8 @@
 				386D6D6D1AACFD2B00131328 /* CustomTransitionViewController.m */,
 				386D6D731AAD089400131328 /* MediaTimingFunctionsViewController.h */,
 				386D6D741AAD089400131328 /* MediaTimingFunctionsViewController.m */,
+				38FED4351AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.h */,
+				38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */,
 			);
 			name = "Animation Demo ViewControllers";
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				386D6D751AAD089400131328 /* MediaTimingFunctionsViewController.m in Sources */,
 				3874DB091AA3E92000259C0F /* JKLandingViewController.m in Sources */,
 				386D6D641AABE04F00131328 /* VideoPlaybackAndEditViewController.m in Sources */,
+				38FED4371AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m in Sources */,
 				3849D2F21AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m in Sources */,
 				386D6D531AAB7C3700131328 /* TDCubeLayerViewController.m in Sources */,
 				3874DB061AA3E92000259C0F /* AppDelegate.m in Sources */,
