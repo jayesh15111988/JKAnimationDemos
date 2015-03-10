@@ -31,7 +31,7 @@
     self.layer.lineJoin = kCALineJoinRound;
     self.layer.backgroundColor = [UIColor colorWithRed:0.4 green:0.6 blue:1.0 alpha:1.0].CGColor;
     self.layer.frame = CGRectMake(0, 0, 200, 200);
-    self.layer.path = [self getPathFromMediaTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    [self setLayerWithPath:[self getPathFromMediaTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]]];
     [self.timingFunctionsBezierCurve.layer addSublayer:self.layer];
 }
 
