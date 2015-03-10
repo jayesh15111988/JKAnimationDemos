@@ -13,6 +13,10 @@
 @property (strong) CAShapeLayer* layer;
 @property (weak, nonatomic) IBOutlet UIView *timingFunctionsBezierCurve;
 
+@property (weak, nonatomic) IBOutlet UITextField *point1Y;
+@property (weak, nonatomic) IBOutlet UITextField *point2X;
+@property (weak, nonatomic) IBOutlet UITextField *point1X;
+@property (weak, nonatomic) IBOutlet UITextField *point2Y;
 @end
 
 @implementation BezierCurveFromTimingFunctionsViewController
@@ -20,17 +24,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Bezier from timing functions";
-}
-
--(void)setLayerWithPath:(CGPathRef)destinationPath {
     self.layer = [CAShapeLayer layer];
     self.layer.lineWidth = 5.0f;
     self.layer.strokeColor = [UIColor blueColor].CGColor;
     self.layer.fillColor = [UIColor clearColor].CGColor;
     self.layer.lineJoin = kCALineJoinRound;
-    self.layer.path = destinationPath;
-    //self.layer.frame = CGRectMake(0, 0, 200, 200);
+    self.layer.backgroundColor = [UIColor colorWithRed:0.4 green:0.6 blue:1.0 alpha:1.0].CGColor;
+    self.layer.frame = CGRectMake(0, 0, 200, 200);
+    self.layer.path = [self getPathFromMediaTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
     [self.timingFunctionsBezierCurve.layer addSublayer:self.layer];
+}
+
+-(void)setLayerWithPath:(CGPathRef)destinationPath {
+    CABasicAnimation* anim = [CABasicAnimation animation];
+    anim.keyPath = @"path";
+    anim.duration = 1.0f;
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [self.layer addAnimation:anim forKey:nil];
+    self.layer.path = destinationPath;
 }
 
 -(CGPathRef)getPathFromMediaTimingFunction:(CAMediaTimingFunction*)inputTimingFunction {
@@ -64,5 +75,15 @@
 - (IBAction)easeInEaseOut:(id)sender {
     [self setLayerWithPath:[self getPathFromMediaTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]]];
 }
+
+- (IBAction)customCurve:(id)sender {
+    [self setLayerWithPath:[self getPathFromMediaTimingFunction:[CAMediaTimingFunction functionWithControlPoints:[self.point1X.text floatValue] :[self.point1Y.text floatValue] :[self.point2X.text floatValue] :[self.point2Y.text floatValue]]]];
+}
+
+
+- (IBAction)viewTapped:(id)sender {
+    [self.view endEditing:YES];
+}
+
 
 @end
