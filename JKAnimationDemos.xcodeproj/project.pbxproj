@@ -34,6 +34,8 @@
 		3874DB0E1AA3E92000259C0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3874DB0D1AA3E92000259C0F /* Images.xcassets */; };
 		3874DB111AA3E92000259C0F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3874DB0F1AA3E92000259C0F /* LaunchScreen.xib */; };
 		3874DB1D1AA3E92000259C0F /* JKAnimationDemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB1C1AA3E92000259C0F /* JKAnimationDemosTests.m */; };
+		387E97C71AAFC6A000F698F8 /* BezierCurvesTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387E97C61AAFC6A000F698F8 /* BezierCurvesTestViewController.m */; };
+		387E97CA1AAFD36800F698F8 /* CustomDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 387E97C91AAFD36800F698F8 /* CustomDrawingView.m */; };
 		38FED4371AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,10 @@
 		3874DB161AA3E92000259C0F /* JKAnimationDemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKAnimationDemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3874DB1B1AA3E92000259C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3874DB1C1AA3E92000259C0F /* JKAnimationDemosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKAnimationDemosTests.m; sourceTree = "<group>"; };
+		387E97C51AAFC6A000F698F8 /* BezierCurvesTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurvesTestViewController.h; sourceTree = "<group>"; };
+		387E97C61AAFC6A000F698F8 /* BezierCurvesTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurvesTestViewController.m; sourceTree = "<group>"; };
+		387E97C81AAFD36800F698F8 /* CustomDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDrawingView.h; sourceTree = "<group>"; };
+		387E97C91AAFD36800F698F8 /* CustomDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDrawingView.m; sourceTree = "<group>"; };
 		38FED4351AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurveFromTimingFunctionsViewController.h; sourceTree = "<group>"; };
 		38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurveFromTimingFunctionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +128,8 @@
 			children = (
 				386D6D411AAB694C00131328 /* FadedView.h */,
 				386D6D421AAB694C00131328 /* FadedView.m */,
+				387E97C81AAFD36800F698F8 /* CustomDrawingView.h */,
+				387E97C91AAFD36800F698F8 /* CustomDrawingView.m */,
 			);
 			name = "Views Collection";
 			sourceTree = "<group>";
@@ -256,6 +264,8 @@
 				386D6D741AAD089400131328 /* MediaTimingFunctionsViewController.m */,
 				38FED4351AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.h */,
 				38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */,
+				387E97C51AAFC6A000F698F8 /* BezierCurvesTestViewController.h */,
+				387E97C61AAFC6A000F698F8 /* BezierCurvesTestViewController.m */,
 			);
 			name = "Animation Demo ViewControllers";
 			sourceTree = "<group>";
@@ -378,10 +388,12 @@
 				386D6D431AAB694C00131328 /* FadedView.m in Sources */,
 				386D6D491AAB6B5600131328 /* AnimatedImageDemoViewController.m in Sources */,
 				386D6D501AAB727900131328 /* BezierCurveArtViewController.m in Sources */,
+				387E97CA1AAFD36800F698F8 /* CustomDrawingView.m in Sources */,
 				386D6D6E1AACFD2B00131328 /* CustomTransitionViewController.m in Sources */,
 				386D6D681AABEC6400131328 /* SimpleAnimationDemoViewController.m in Sources */,
 				386D6D5B1AABD9D000131328 /* EmitterDemoViewController.m in Sources */,
 				386D6D561AABCC0000131328 /* ReplicatorLayerViewController.m in Sources */,
+				387E97C71AAFC6A000F698F8 /* BezierCurvesTestViewController.m in Sources */,
 				386D6D3F1AAB687C00131328 /* FadingBackgroundViewController.m in Sources */,
 				3874DB031AA3E92000259C0F /* main.m in Sources */,
 			);
