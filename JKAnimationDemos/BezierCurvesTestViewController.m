@@ -10,7 +10,6 @@
 #import "CustomDrawingView.h"
 
 @interface BezierCurvesTestViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *modeIndicatorLabel;
 @property (strong, nonatomic) IBOutlet CustomDrawingView *customDrawingView;
 @end
 
@@ -20,10 +19,7 @@
     [super viewDidLoad];
     self.title = @"Bezier Curve Fun";
 }
-- (IBAction)modeSwitchChanged:(UISwitch *)sender {
-    self.customDrawingView.isRegularModeOn = !self.customDrawingView.isRegularModeOn;
-    self.modeIndicatorLabel.text = [sender isOn]? @"Regular" : @"Custom";
-}
+
 
 - (IBAction)tapPressed:(id)sender {
     [self.view endEditing:YES];

@@ -915,13 +915,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhy-Km-W4s">
                                 <rect key="frame" x="204" y="80" width="100" height="31"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unoptimized" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E74-Jz-N7U">
+                                <rect key="frame" x="204" y="125" width="100" height="31"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ykB-5Q-DbN">
                                 <rect key="frame" x="136" y="80" width="51" height="31"/>
                                 <connections>
-                                    <action selector="modeSwitchChanged:" destination="Fcg-Qi-YwE" eventType="valueChanged" id="myN-jH-Ing"/>
+                                    <action selector="modeSwitchChanged:" destination="Xfd-Nc-Buw" eventType="valueChanged" id="2Ky-wH-ld1"/>
                                 </connections>
                             </switch>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brush Size" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-Hf-ojc">
@@ -933,7 +939,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNg-jm-sMJ">
-                                <rect key="frame" x="118" y="125" width="85" height="30"/>
+                                <rect key="frame" x="6" y="125" width="85" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="Tmu-FR-p8T"/>
                                     <constraint firstAttribute="height" constant="30" id="s7C-LI-8YD"/>
@@ -945,6 +951,12 @@
                                     <action selector="clearAllButtonPressed:" destination="Xfd-Nc-Buw" eventType="touchUpInside" id="4ee-cG-WPV"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bVl-fn-4Lv">
+                                <rect key="frame" x="136" y="125" width="51" height="31"/>
+                                <connections>
+                                    <action selector="optimizationSwitchChanged:" destination="Xfd-Nc-Buw" eventType="valueChanged" id="aB5-vm-A0L"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -955,14 +967,23 @@
                             <constraint firstItem="ykB-5Q-DbN" firstAttribute="leading" secondItem="jZa-Hf-ojc" secondAttribute="trailing" constant="10" id="BQH-n5-6aO"/>
                             <constraint firstItem="jZa-Hf-ojc" firstAttribute="leading" secondItem="Xfd-Nc-Buw" secondAttribute="leadingMargin" constant="-10" id="J02-Rg-z6Y"/>
                             <constraint firstAttribute="centerX" secondItem="bNg-jm-sMJ" secondAttribute="centerX" id="Kqg-NJ-xM7"/>
+                            <constraint firstItem="bNg-jm-sMJ" firstAttribute="leading" secondItem="Xfd-Nc-Buw" secondAttribute="leadingMargin" constant="-10" id="RFd-T5-GNN"/>
                             <constraint firstItem="ykB-5Q-DbN" firstAttribute="bottom" secondItem="Xhy-Km-W4s" secondAttribute="bottom" id="RkZ-OI-DP2"/>
                             <constraint firstItem="Xhy-Km-W4s" firstAttribute="trailing" secondItem="Xfd-Nc-Buw" secondAttribute="trailingMargin" id="jUe-zj-W4C"/>
                             <constraint firstItem="bNg-jm-sMJ" firstAttribute="top" secondItem="jZa-Hf-ojc" secondAttribute="bottom" constant="14" id="lIF-ct-KEJ"/>
                             <constraint firstAttribute="centerX" secondItem="ykB-5Q-DbN" secondAttribute="centerX" id="sIj-Ji-iJx"/>
                             <constraint firstItem="ykB-5Q-DbN" firstAttribute="top" secondItem="Xhy-Km-W4s" secondAttribute="top" id="w0B-TQ-jYF"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Kqg-NJ-xM7"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outlet property="brushSizeField" destination="jZa-Hf-ojc" id="GFi-t9-ncn"/>
+                            <outlet property="modeIndicatorLabel" destination="Xhy-Km-W4s" id="r8l-tj-9ek"/>
+                            <outlet property="modeSwitch" destination="ykB-5Q-DbN" id="wB0-as-MDU"/>
+                            <outlet property="optimizationStatusLabel" destination="E74-Jz-N7U" id="z11-cV-SbX"/>
                             <outletCollection property="gestureRecognizers" destination="WaO-lj-fQn" appends="YES" id="Hjd-QP-DFP"/>
                         </connections>
                     </view>
@@ -970,7 +991,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="customDrawingView" destination="Xfd-Nc-Buw" id="0sb-Di-sZr"/>
-                        <outlet property="modeIndicatorLabel" destination="Xhy-Km-W4s" id="cEQ-jn-DcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fI-iy-UZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
