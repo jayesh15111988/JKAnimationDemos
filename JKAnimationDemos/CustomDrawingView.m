@@ -35,6 +35,7 @@
         if(self.isBezierOptimized) {
             if(CGRectIntersectsRect(rectangleToPaint, rect)){
                 [[UIImage imageNamed:@"redDot.png"] drawInRect:[self getRectFromPoint:currentPoint]];
+                break;
             }
         } else {
             [[UIImage imageNamed:@"redDot.png"] drawInRect:[self getRectFromPoint:currentPoint]];

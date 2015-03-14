@@ -930,7 +930,7 @@
                                     <action selector="modeSwitchChanged:" destination="Xfd-Nc-Buw" eventType="valueChanged" id="2Ky-wH-ld1"/>
                                 </connections>
                             </switch>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brush Size" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-Hf-ojc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="Brush Size" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-Hf-ojc">
                                 <rect key="frame" x="6" y="81" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
@@ -1002,9 +1002,84 @@
             </objects>
             <point key="canvasLocation" x="4827" y="587"/>
         </scene>
+        <!--Layer Masking View Controller-->
+        <scene sceneID="916-Vh-WLb">
+            <objects>
+                <viewController storyboardIdentifier="layermask" id="JgS-FU-ah3" customClass="LayerMaskingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PdR-Jt-vSg"/>
+                        <viewControllerLayoutGuide type="bottom" id="lLG-aC-JCM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3AF-ze-xio">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movingManSprite.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lap-kZ-aKk">
+                                <rect key="frame" x="184" y="102" width="120" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Id0-o7-0Xx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donald.png" translatesAutoresizingMaskIntoConstraints="NO" id="oYb-nd-shf">
+                                <rect key="frame" x="16" y="102" width="120" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="fq2-Bx-fDc"/>
+                                    <constraint firstAttribute="height" constant="100" id="i48-td-Paq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6t-6F-0He">
+                                <rect key="frame" x="137" y="65" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pRs-5w-Q8m"/>
+                                    <constraint firstAttribute="width" constant="46" id="t2K-Q0-Jfs"/>
+                                </constraints>
+                                <state key="normal" title="Mask">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="maskImageButtonPressed:" destination="JgS-FU-ah3" eventType="touchUpInside" id="duc-gB-iBC"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movingManSprite.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="X9e-sa-aMT">
+                                <rect key="frame" x="100" y="102" width="120" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="J8I-He-mRH"/>
+                                    <constraint firstAttribute="height" constant="100" id="Z5R-fC-g7n"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oYb-nd-shf" firstAttribute="bottom" secondItem="lap-kZ-aKk" secondAttribute="bottom" id="4Bi-DN-Hw9"/>
+                            <constraint firstItem="X9e-sa-aMT" firstAttribute="top" secondItem="k6t-6F-0He" secondAttribute="bottom" constant="7" id="5r0-LM-M6m"/>
+                            <constraint firstItem="oYb-nd-shf" firstAttribute="height" secondItem="lap-kZ-aKk" secondAttribute="height" id="AFw-Bd-8cx"/>
+                            <constraint firstAttribute="centerX" secondItem="k6t-6F-0He" secondAttribute="centerX" id="Blb-nh-3MA"/>
+                            <constraint firstItem="oYb-nd-shf" firstAttribute="top" secondItem="lap-kZ-aKk" secondAttribute="top" id="G2o-tp-Dqo"/>
+                            <constraint firstItem="oYb-nd-shf" firstAttribute="leading" secondItem="3AF-ze-xio" secondAttribute="leadingMargin" id="S3G-ge-5P2"/>
+                            <constraint firstItem="k6t-6F-0He" firstAttribute="top" secondItem="3AF-ze-xio" secondAttribute="topMargin" constant="65" id="Ygx-Th-NPB"/>
+                            <constraint firstItem="oYb-nd-shf" firstAttribute="top" secondItem="k6t-6F-0He" secondAttribute="bottom" constant="7" id="aza-hE-DPa"/>
+                            <constraint firstItem="lap-kZ-aKk" firstAttribute="trailing" secondItem="3AF-ze-xio" secondAttribute="trailingMargin" id="jwO-bW-mAb"/>
+                            <constraint firstAttribute="centerX" secondItem="X9e-sa-aMT" secondAttribute="centerX" id="kvF-Fq-hfe"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="leftImageLeadingSpaceCostraint" destination="S3G-ge-5P2" id="TKA-69-bco"/>
+                        <outlet property="maskedImageView" destination="X9e-sa-aMT" id="STU-ky-57E"/>
+                        <outlet property="maskingImage" destination="oYb-nd-shf" id="EbU-eK-0rg"/>
+                        <outlet property="originalImageView" destination="lap-kZ-aKk" id="Aal-f6-dlM"/>
+                        <outlet property="rightImageTrailingSpaceCostraint" destination="jwO-bW-mAb" id="Smt-lX-aH7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biB-kQ-fRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5207" y="587"/>
+        </scene>
     </scenes>
     <resources>
         <image name="changeColor.png" width="128" height="128"/>
+        <image name="donald.png" width="450" height="400"/>
+        <image name="movingManSprite.jpg" width="567" height="182"/>
         <image name="spriteAnimationRunning.png" width="256" height="256"/>
     </resources>
 </document>

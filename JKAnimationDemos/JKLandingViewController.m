@@ -21,6 +21,7 @@
 #import "MediaTimingFunctionsViewController.h"
 #import "BezierCurveFromTimingFunctionsViewController.h"
 #import "BezierCurvesTestViewController.h"
+#import "LayerMaskingViewController.h"
 
 @interface JKLandingViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -32,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Core Animation Demos";
-    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Replication Layer", @"Emitter Layer", @"Video Playback", @"Animation Demo", @"Bezier Movement", @"Custom Transition", @"Media Timings", @"Bezier from timing functions", @"Bezier Curve Fun"];
+    self.demosList = @[@"Loading View", @"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Replication Layer", @"Emitter Layer", @"Video Playback", @"Animation Demo", @"Bezier Movement", @"Custom Transition", @"Media Timings", @"Bezier from timing functions", @"Bezier Curve Fun", @"More Examples"];
     [self.tableView reloadData];
 }
 
@@ -89,6 +90,9 @@
     } else if (indexPath.row == 13) {
         BezierCurvesTestViewController* funBezierCurve = (BezierCurvesTestViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"bezierplay"];
         [self.navigationController pushViewController:funBezierCurve animated:YES];
+    } else if (indexPath.row == 14) {
+        LayerMaskingViewController* layerMaskingViewController = (LayerMaskingViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"layermask"];
+        [self.navigationController pushViewController:layerMaskingViewController animated:YES];
     }
 }
 

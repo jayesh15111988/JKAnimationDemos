@@ -36,6 +36,9 @@
 		3874DB1D1AA3E92000259C0F /* JKAnimationDemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3874DB1C1AA3E92000259C0F /* JKAnimationDemosTests.m */; };
 		387E97C71AAFC6A000F698F8 /* BezierCurvesTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387E97C61AAFC6A000F698F8 /* BezierCurvesTestViewController.m */; };
 		387E97CA1AAFD36800F698F8 /* CustomDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 387E97C91AAFD36800F698F8 /* CustomDrawingView.m */; };
+		389ECCE21AB28291003B9EEA /* LayerMaskingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389ECCE11AB28291003B9EEA /* LayerMaskingViewController.m */; };
+		389ECCE41AB2849F003B9EEA /* cone.png in Resources */ = {isa = PBXBuildFile; fileRef = 389ECCE31AB2849F003B9EEA /* cone.png */; };
+		389ECCE61AB28693003B9EEA /* donald.png in Resources */ = {isa = PBXBuildFile; fileRef = 389ECCE51AB28693003B9EEA /* donald.png */; };
 		38FED4371AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +104,10 @@
 		387E97C61AAFC6A000F698F8 /* BezierCurvesTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurvesTestViewController.m; sourceTree = "<group>"; };
 		387E97C81AAFD36800F698F8 /* CustomDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDrawingView.h; sourceTree = "<group>"; };
 		387E97C91AAFD36800F698F8 /* CustomDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDrawingView.m; sourceTree = "<group>"; };
+		389ECCE01AB28291003B9EEA /* LayerMaskingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerMaskingViewController.h; sourceTree = "<group>"; };
+		389ECCE11AB28291003B9EEA /* LayerMaskingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerMaskingViewController.m; sourceTree = "<group>"; };
+		389ECCE31AB2849F003B9EEA /* cone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cone.png; sourceTree = "<group>"; };
+		389ECCE51AB28693003B9EEA /* donald.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donald.png; sourceTree = "<group>"; };
 		38FED4351AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurveFromTimingFunctionsViewController.h; sourceTree = "<group>"; };
 		38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurveFromTimingFunctionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +147,9 @@
 				386D6D451AAB6B3000131328 /* movingManSprite.jpg */,
 				386D6D4C1AAB70F200131328 /* smurf_sprite.png */,
 				386D6D571AABD3C600131328 /* changeColor.png */,
+				389ECCE51AB28693003B9EEA /* donald.png */,
 				386D6D5E1AABDE0800131328 /* redDot.png */,
+				389ECCE31AB2849F003B9EEA /* cone.png */,
 				386D6D4A1AAB6EBE00131328 /* spriteAnimationRunning.png */,
 			);
 			name = Images;
@@ -266,6 +275,8 @@
 				38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */,
 				387E97C51AAFC6A000F698F8 /* BezierCurvesTestViewController.h */,
 				387E97C61AAFC6A000F698F8 /* BezierCurvesTestViewController.m */,
+				389ECCE01AB28291003B9EEA /* LayerMaskingViewController.h */,
+				389ECCE11AB28291003B9EEA /* LayerMaskingViewController.m */,
 			);
 			name = "Animation Demo ViewControllers";
 			sourceTree = "<group>";
@@ -356,8 +367,10 @@
 				386D6D4B1AAB6EBE00131328 /* spriteAnimationRunning.png in Resources */,
 				3874DB111AA3E92000259C0F /* LaunchScreen.xib in Resources */,
 				386D6D581AABD3C600131328 /* changeColor.png in Resources */,
+				389ECCE41AB2849F003B9EEA /* cone.png in Resources */,
 				386D6D5F1AABDE0800131328 /* redDot.png in Resources */,
 				386D6D4D1AAB70F200131328 /* smurf_sprite.png in Resources */,
+				389ECCE61AB28693003B9EEA /* donald.png in Resources */,
 				3874DB0E1AA3E92000259C0F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +399,7 @@
 				386D6D711AAD071F00131328 /* UIImage+Cropped.m in Sources */,
 				386D6D6B1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m in Sources */,
 				386D6D431AAB694C00131328 /* FadedView.m in Sources */,
+				389ECCE21AB28291003B9EEA /* LayerMaskingViewController.m in Sources */,
 				386D6D491AAB6B5600131328 /* AnimatedImageDemoViewController.m in Sources */,
 				386D6D501AAB727900131328 /* BezierCurveArtViewController.m in Sources */,
 				387E97CA1AAFD36800F698F8 /* CustomDrawingView.m in Sources */,
