@@ -100,6 +100,7 @@
             UIImage* maskImage = [UIImage imageNamed:@"donald.png"];
             maskLayer.contents = (__bridge id) maskImage.CGImage;
             self.maskedImageView.layer.mask = maskLayer;
+        } completion:^(BOOL finished) {
             sender.hidden = YES;
         }];
     }];

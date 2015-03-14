@@ -99,7 +99,6 @@
     if(self.progressIndicator <= 1.0) {
         self.drawAnimation.fromValue   = [NSNumber numberWithFloat:self.previousProgressIndicator];
         self.drawAnimation.toValue   = [NSNumber numberWithFloat:self.progressIndicator];
-        NSLog(@"%f Stroke End Value is", self.progressIndicator);
         [self.circle addAnimation:self.drawAnimation forKey:UNIQUE_ANIMATION_KEY];
         self.previousProgressIndicator = self.progressIndicator;
         self.progressIndicator += 0.05;
