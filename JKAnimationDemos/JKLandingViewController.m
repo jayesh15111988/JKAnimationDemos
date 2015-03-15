@@ -48,52 +48,40 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIViewController* destinationViewController = nil;
     if(indexPath.row == 0) {
-        LoadingAnimationDemoViewController* loadingDemo = [self.storyboard instantiateViewControllerWithIdentifier:@"loading"];
-        [self.navigationController pushViewController:loadingDemo animated:YES];
+        destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loading"];
     } else if(indexPath.row == 1){
-        FadingBackgroundViewController* fadingBackgroundViewController = (FadingBackgroundViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"fading"];
-        [self.navigationController pushViewController:fadingBackgroundViewController animated:YES];
+        destinationViewController = (FadingBackgroundViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"fading"];
     } else if (indexPath.row == 2) {
-        AnimatedImageDemoViewController* animatedImageViewController = (AnimatedImageDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"animatedimage"];
-        [self.navigationController pushViewController:animatedImageViewController animated:YES];
+        destinationViewController = (AnimatedImageDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"animatedimage"];
     } else if (indexPath.row == 3) {
-        BezierCurveArtViewController* bezierPath = (BezierCurveArtViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"bezierpath"];
-        [self.navigationController pushViewController:bezierPath animated:YES];
+        destinationViewController = (BezierCurveArtViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"bezierpath"];
     } else if (indexPath.row == 4) {
-        TDCubeLayerViewController* cubeViewCotroller = (TDCubeLayerViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"3dcube"];
-        [self.navigationController pushViewController:cubeViewCotroller animated:YES];
+        destinationViewController = (TDCubeLayerViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"3dcube"];
     } else if (indexPath.row == 5) {
-        ReplicatorLayerViewController* replicateLayerViewController = (ReplicatorLayerViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"replicator"];
-        [self.navigationController pushViewController:replicateLayerViewController animated:YES];
+        destinationViewController = (ReplicatorLayerViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"replicator"];
     } else if (indexPath.row == 6) {
-        EmitterDemoViewController* emitterViewController = (EmitterDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"emitter"];
-        [self.navigationController pushViewController:emitterViewController animated:YES];
+        destinationViewController = (EmitterDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"emitter"];
     } else if (indexPath.row == 7) {
-        VideoPlaybackAndEditViewController* videoDemoViewControlelr = (VideoPlaybackAndEditViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"video"];
-        [self.navigationController pushViewController:videoDemoViewControlelr animated:YES];
+        destinationViewController = (VideoPlaybackAndEditViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"video"];
     } else if (indexPath.row == 8) {
-        SimpleAnimationDemoViewController* animationViewController = (SimpleAnimationDemoViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"animation"];
-        [self.navigationController pushViewController:animationViewController animated:YES];
+        destinationViewController = (SimpleAnimationDemoViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"animation"];
     } else if (indexPath.row == 9) {
-        ComplexBezierPathTrailDemoViewController* bezierPathMovement = (ComplexBezierPathTrailDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"beziermovement"];
-        [self.navigationController pushViewController:bezierPathMovement animated:YES];
+        destinationViewController = (ComplexBezierPathTrailDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"beziermovement"];
     } else if (indexPath.row == 10) {
-        CustomTransitionViewController* customTransitionViewController = (CustomTransitionViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"customtransition"];
-        [self.navigationController pushViewController:customTransitionViewController animated:YES];
+        destinationViewController = (CustomTransitionViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"customtransition"];
     } else if (indexPath.row == 11) {
-        MediaTimingFunctionsViewController* mediaTimingViewCotroller = (MediaTimingFunctionsViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"mediatiming"];
-        [self.navigationController pushViewController:mediaTimingViewCotroller animated:YES];
+        destinationViewController = (MediaTimingFunctionsViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"mediatiming"];
     } else if (indexPath.row == 12) {
-        BezierCurveFromTimingFunctionsViewController* bezierCurveFromTimingFunctionViewC = (BezierCurveFromTimingFunctionsViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"bezierfromtiming"];
-        [self.navigationController pushViewController:bezierCurveFromTimingFunctionViewC animated:YES];
+        destinationViewController = (BezierCurveFromTimingFunctionsViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"bezierfromtiming"];
     } else if (indexPath.row == 13) {
-        BezierCurvesTestViewController* funBezierCurve = (BezierCurvesTestViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"bezierplay"];
-        [self.navigationController pushViewController:funBezierCurve animated:YES];
+        destinationViewController = (BezierCurvesTestViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"bezierplay"];
     } else if (indexPath.row == 14) {
-        LayerMaskingViewController* layerMaskingViewController = (LayerMaskingViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"layermask"];
-        [self.navigationController pushViewController:layerMaskingViewController animated:YES];
+        destinationViewController = (LayerMaskingViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"layermask"];
     }
+    [self.navigationController pushViewController:destinationViewController animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
