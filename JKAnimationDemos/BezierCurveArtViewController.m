@@ -8,7 +8,7 @@
 
 #import "BezierCurveArtViewController.h"
 #define MAN_IMAGE_HEAD_RADIUS 20
-#define CUSOTM_REACTANGLE_WIDTH 300
+#define CUSOTM_REACTANGLE_WIDTH 280
 
 @interface BezierCurveArtViewController ()
 @property (weak, nonatomic) IBOutlet UIView *containerOne;
@@ -45,7 +45,7 @@
     [self.containerOne.layer addSublayer:shapeLayer];
     
     //Rectabgle with rounded border only for 3 corners and sharp one for single corner
-    CGRect rect = CGRectMake(self.containerTwo.center.x - CUSOTM_REACTANGLE_WIDTH/2, 10, CUSOTM_REACTANGLE_WIDTH, 120);
+    CGRect rect = CGRectMake(10, 10, self.containerTwo.frame.size.width - 20, 120);
     CGSize radius = CGSizeMake(50, 50);
     UIRectCorner rectangleCorner = UIRectCornerBottomLeft | UIRectCornerTopRight;
     UIBezierPath* customeRoundedCornerBezierPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:rectangleCorner cornerRadii:radius];

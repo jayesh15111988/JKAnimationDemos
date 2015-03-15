@@ -170,15 +170,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iju-Ft-4Rc">
-                                <rect key="frame" x="10" y="44" width="300" height="180"/>
+                                <rect key="frame" x="20" y="44" width="280" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="gy1-ET-E8g"/>
-                                    <constraint firstAttribute="width" constant="300" id="sea-D1-5qU"/>
+                                    <constraint firstAttribute="width" constant="280" id="sea-D1-5qU"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyK-Z4-KcN">
-                                <rect key="frame" x="10" y="256" width="300" height="180"/>
+                                <rect key="frame" x="20" y="256" width="280" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
