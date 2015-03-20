@@ -34,11 +34,10 @@
         CGRect rectangleToPaint = [self getRectFromPoint:currentPoint];
         if(self.isBezierOptimized) {
             if(CGRectIntersectsRect(rectangleToPaint, rect)){
-                [[UIImage imageNamed:@"redDot.png"] drawInRect:[self getRectFromPoint:currentPoint]];
-                break;
+                [[UIImage imageNamed:@"donald.png"] drawInRect:[self getRectFromPoint:currentPoint]];
             }
         } else {
-            [[UIImage imageNamed:@"redDot.png"] drawInRect:[self getRectFromPoint:currentPoint]];
+            [[UIImage imageNamed:@"donald.png"] drawInRect:[self getRectFromPoint:currentPoint]];
         }
     }
 }

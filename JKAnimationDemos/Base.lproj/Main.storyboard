@@ -1075,6 +1075,25 @@
             </objects>
             <point key="canvasLocation" x="5207" y="587"/>
         </scene>
+        <!--Line Draw Demo View Controller-->
+        <scene sceneID="QWb-vR-otE">
+            <objects>
+                <viewController storyboardIdentifier="linedrawing" id="88p-Uk-iGF" customClass="LineDrawDemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uq9-GK-Upo"/>
+                        <viewControllerLayoutGuide type="bottom" id="fLv-pm-2Dz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Re7-U2-vKM" customClass="CustomLineDrawingView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4LL-mP-RlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5575" y="587"/>
+        </scene>
     </scenes>
     <resources>
         <image name="changeColor.png" width="128" height="128"/>

@@ -39,6 +39,8 @@
 		389ECCE21AB28291003B9EEA /* LayerMaskingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389ECCE11AB28291003B9EEA /* LayerMaskingViewController.m */; };
 		389ECCE41AB2849F003B9EEA /* cone.png in Resources */ = {isa = PBXBuildFile; fileRef = 389ECCE31AB2849F003B9EEA /* cone.png */; };
 		389ECCE61AB28693003B9EEA /* donald.png in Resources */ = {isa = PBXBuildFile; fileRef = 389ECCE51AB28693003B9EEA /* donald.png */; };
+		38EE2A4F1ABBAFE9004C7668 /* LineDrawDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EE2A4E1ABBAFE9004C7668 /* LineDrawDemoViewController.m */; };
+		38EE2A521ABBB0F1004C7668 /* CustomLineDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EE2A511ABBB0F1004C7668 /* CustomLineDrawingView.m */; };
 		38FED4371AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +110,10 @@
 		389ECCE11AB28291003B9EEA /* LayerMaskingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerMaskingViewController.m; sourceTree = "<group>"; };
 		389ECCE31AB2849F003B9EEA /* cone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cone.png; sourceTree = "<group>"; };
 		389ECCE51AB28693003B9EEA /* donald.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donald.png; sourceTree = "<group>"; };
+		38EE2A4D1ABBAFE9004C7668 /* LineDrawDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDrawDemoViewController.h; sourceTree = "<group>"; };
+		38EE2A4E1ABBAFE9004C7668 /* LineDrawDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDrawDemoViewController.m; sourceTree = "<group>"; };
+		38EE2A501ABBB0F1004C7668 /* CustomLineDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLineDrawingView.h; sourceTree = "<group>"; };
+		38EE2A511ABBB0F1004C7668 /* CustomLineDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLineDrawingView.m; sourceTree = "<group>"; };
 		38FED4351AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurveFromTimingFunctionsViewController.h; sourceTree = "<group>"; };
 		38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurveFromTimingFunctionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +143,8 @@
 				386D6D421AAB694C00131328 /* FadedView.m */,
 				387E97C81AAFD36800F698F8 /* CustomDrawingView.h */,
 				387E97C91AAFD36800F698F8 /* CustomDrawingView.m */,
+				38EE2A501ABBB0F1004C7668 /* CustomLineDrawingView.h */,
+				38EE2A511ABBB0F1004C7668 /* CustomLineDrawingView.m */,
 			);
 			name = "Views Collection";
 			sourceTree = "<group>";
@@ -277,6 +285,8 @@
 				387E97C61AAFC6A000F698F8 /* BezierCurvesTestViewController.m */,
 				389ECCE01AB28291003B9EEA /* LayerMaskingViewController.h */,
 				389ECCE11AB28291003B9EEA /* LayerMaskingViewController.m */,
+				38EE2A4D1ABBAFE9004C7668 /* LineDrawDemoViewController.h */,
+				38EE2A4E1ABBAFE9004C7668 /* LineDrawDemoViewController.m */,
 			);
 			name = "Animation Demo ViewControllers";
 			sourceTree = "<group>";
@@ -400,6 +410,8 @@
 				386D6D6B1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m in Sources */,
 				386D6D431AAB694C00131328 /* FadedView.m in Sources */,
 				389ECCE21AB28291003B9EEA /* LayerMaskingViewController.m in Sources */,
+				38EE2A521ABBB0F1004C7668 /* CustomLineDrawingView.m in Sources */,
+				38EE2A4F1ABBAFE9004C7668 /* LineDrawDemoViewController.m in Sources */,
 				386D6D491AAB6B5600131328 /* AnimatedImageDemoViewController.m in Sources */,
 				386D6D501AAB727900131328 /* BezierCurveArtViewController.m in Sources */,
 				387E97CA1AAFD36800F698F8 /* CustomDrawingView.m in Sources */,
