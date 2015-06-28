@@ -33,7 +33,6 @@
     [path moveToPoint:CGPointMake(containerOneCenterX, 100)];
     [path addLineToPoint:CGPointMake(containerOneCenterX + 20, 150)];
     
-    
     CAShapeLayer* shapeLayer = [CAShapeLayer new];
     shapeLayer.strokeColor = [UIColor orangeColor].CGColor;
     shapeLayer.fillColor = [UIColor clearColor].CGColor;

@@ -23,11 +23,6 @@
 
 @implementation CustomDrawingView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
- */
-
 - (void)drawRect:(CGRect)rect {
     for(NSValue* tracedPointValue in self.tracedPointsCollection) {
         CGPoint currentPoint = [tracedPointValue CGPointValue];
@@ -42,11 +37,11 @@
     }
 }
 
--(CGRect)getRectFromPoint:(CGPoint)inputPoint {
+- (CGRect)getRectFromPoint:(CGPoint)inputPoint {
     return CGRectMake(inputPoint.x - self.brushSize, inputPoint.y - self.brushSize, self.brushSize, self.brushSize);
 }
 
--(void)awakeFromNib {
+- (void)awakeFromNib {
     self.isRegularModeOn = YES;
     self.isBezierOptimized = NO;
     self.brushSizeField.delegate = self;
@@ -59,7 +54,7 @@
     [self.layer addSublayer:self.viewLayer];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     CGPoint touchBeginPoint = [[touches anyObject] locationInView:self];
     if(self.isRegularModeOn) {
         [self.bezierPath moveToPoint:touchBeginPoint];
@@ -68,11 +63,11 @@
     }
 }
 
--(void)textFieldDidEndEditing:(UITextField *)textField {
+- (void)textFieldDidEndEditing:(UITextField *)textField {
     self.brushSize = [self.brushSizeField.text floatValue];
 }
 
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     CGPoint touchMovePoint = [[touches anyObject] locationInView:self];
     if(self.isRegularModeOn) {
         [self.bezierPath addLineToPoint:touchMovePoint];
@@ -112,8 +107,5 @@
     }
     [self clearAllButtonPressed:nil];
 }
-
-
-
 
 @end
