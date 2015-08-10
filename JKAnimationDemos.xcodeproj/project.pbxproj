@@ -10,7 +10,6 @@
 		3849D2F21AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3849D2F11AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m */; };
 		386D6D3F1AAB687C00131328 /* FadingBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D3E1AAB687C00131328 /* FadingBackgroundViewController.m */; };
 		386D6D431AAB694C00131328 /* FadedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D421AAB694C00131328 /* FadedView.m */; };
-		386D6D461AAB6B3000131328 /* movingManSprite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D451AAB6B3000131328 /* movingManSprite.jpg */; };
 		386D6D491AAB6B5600131328 /* AnimatedImageDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D481AAB6B5600131328 /* AnimatedImageDemoViewController.m */; };
 		386D6D4B1AAB6EBE00131328 /* spriteAnimationRunning.png in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D4A1AAB6EBE00131328 /* spriteAnimationRunning.png */; };
 		386D6D4D1AAB70F200131328 /* smurf_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 386D6D4C1AAB70F200131328 /* smurf_sprite.png */; };
@@ -41,6 +40,9 @@
 		389ECCE61AB28693003B9EEA /* donald.png in Resources */ = {isa = PBXBuildFile; fileRef = 389ECCE51AB28693003B9EEA /* donald.png */; };
 		38EE2A4F1ABBAFE9004C7668 /* LineDrawDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EE2A4E1ABBAFE9004C7668 /* LineDrawDemoViewController.m */; };
 		38EE2A521ABBB0F1004C7668 /* CustomLineDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EE2A511ABBB0F1004C7668 /* CustomLineDrawingView.m */; };
+		38EF9FE01B77FAE400DAB935 /* girlRunning.png in Resources */ = {isa = PBXBuildFile; fileRef = 38EF9FDF1B77FAE400DAB935 /* girlRunning.png */; };
+		38EF9FE41B7809D900DAB935 /* sc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 38EF9FE31B7809D900DAB935 /* sc.jpg */; };
+		38EF9FE61B7809E000DAB935 /* compiler.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 38EF9FE51B7809E000DAB935 /* compiler.jpg */; };
 		38FED4371AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +63,6 @@
 		386D6D3E1AAB687C00131328 /* FadingBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingBackgroundViewController.m; sourceTree = "<group>"; };
 		386D6D411AAB694C00131328 /* FadedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadedView.h; sourceTree = "<group>"; };
 		386D6D421AAB694C00131328 /* FadedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadedView.m; sourceTree = "<group>"; };
-		386D6D451AAB6B3000131328 /* movingManSprite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = movingManSprite.jpg; sourceTree = "<group>"; };
 		386D6D471AAB6B5600131328 /* AnimatedImageDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedImageDemoViewController.h; sourceTree = "<group>"; };
 		386D6D481AAB6B5600131328 /* AnimatedImageDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedImageDemoViewController.m; sourceTree = "<group>"; };
 		386D6D4A1AAB6EBE00131328 /* spriteAnimationRunning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spriteAnimationRunning.png; sourceTree = "<group>"; };
@@ -114,6 +115,9 @@
 		38EE2A4E1ABBAFE9004C7668 /* LineDrawDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDrawDemoViewController.m; sourceTree = "<group>"; };
 		38EE2A501ABBB0F1004C7668 /* CustomLineDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLineDrawingView.h; sourceTree = "<group>"; };
 		38EE2A511ABBB0F1004C7668 /* CustomLineDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLineDrawingView.m; sourceTree = "<group>"; };
+		38EF9FDF1B77FAE400DAB935 /* girlRunning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girlRunning.png; sourceTree = "<group>"; };
+		38EF9FE31B7809D900DAB935 /* sc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sc.jpg; sourceTree = "<group>"; };
+		38EF9FE51B7809E000DAB935 /* compiler.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = compiler.jpg; sourceTree = "<group>"; };
 		38FED4351AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurveFromTimingFunctionsViewController.h; sourceTree = "<group>"; };
 		38FED4361AAE6CE60043CD43 /* BezierCurveFromTimingFunctionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurveFromTimingFunctionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,8 +156,10 @@
 		386D6D441AAB6B0700131328 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				386D6D451AAB6B3000131328 /* movingManSprite.jpg */,
+				38EF9FE31B7809D900DAB935 /* sc.jpg */,
+				38EF9FE51B7809E000DAB935 /* compiler.jpg */,
 				386D6D4C1AAB70F200131328 /* smurf_sprite.png */,
+				38EF9FDF1B77FAE400DAB935 /* girlRunning.png */,
 				386D6D571AABD3C600131328 /* changeColor.png */,
 				389ECCE51AB28693003B9EEA /* donald.png */,
 				386D6D5E1AABDE0800131328 /* redDot.png */,
@@ -371,15 +377,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38EF9FE41B7809D900DAB935 /* sc.jpg in Resources */,
 				386D6D651AABE2CA00131328 /* animationVideo.mp4 in Resources */,
+				38EF9FE61B7809E000DAB935 /* compiler.jpg in Resources */,
 				3874DB0C1AA3E92000259C0F /* Main.storyboard in Resources */,
-				386D6D461AAB6B3000131328 /* movingManSprite.jpg in Resources */,
 				386D6D4B1AAB6EBE00131328 /* spriteAnimationRunning.png in Resources */,
 				3874DB111AA3E92000259C0F /* LaunchScreen.xib in Resources */,
 				386D6D581AABD3C600131328 /* changeColor.png in Resources */,
 				389ECCE41AB2849F003B9EEA /* cone.png in Resources */,
 				386D6D5F1AABDE0800131328 /* redDot.png in Resources */,
 				386D6D4D1AAB70F200131328 /* smurf_sprite.png in Resources */,
+				38EF9FE01B77FAE400DAB935 /* girlRunning.png in Resources */,
 				389ECCE61AB28693003B9EEA /* donald.png in Resources */,
 				3874DB0E1AA3E92000259C0F /* Images.xcassets in Resources */,
 			);

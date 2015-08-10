@@ -9,10 +9,6 @@
 #import "BezierCurvesTestViewController.h"
 #import "CustomDrawingView.h"
 
-@interface BezierCurvesTestViewController ()
-@property (strong, nonatomic) IBOutlet CustomDrawingView *customDrawingView;
-@end
-
 @implementation BezierCurvesTestViewController
 
 - (void)viewDidLoad {

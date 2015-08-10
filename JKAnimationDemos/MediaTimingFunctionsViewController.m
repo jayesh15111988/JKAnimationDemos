@@ -44,7 +44,8 @@
     movingLayer = [CALayer layer];
     movingLayer.frame = CGRectMake(0, 100, 50, 50);
     movingLayer.backgroundColor = [UIColor greenColor].CGColor;
-    movingLayer.speed = 0;
+    movingLayer.timeOffset = 0.0;
+    movingLayer.speed = 0.0;
     [self.view.layer addSublayer:movingLayer];
     
     CABasicAnimation* colorChangeAnimation = [CABasicAnimation animation];
@@ -59,7 +60,6 @@
     CAAnimationGroup* animationGroup = [CAAnimationGroup animation];
     animationGroup.animations = @[animation, colorChangeAnimation];
     animationGroup.duration = DEFAULT_ANIMATION_DURATION;
-    animationGroup.timeOffset = 0.0;
     animationGroup.removedOnCompletion = NO;
     [movingLayer addAnimation:animationGroup forKey:@"translateAnimation"];
 }
@@ -73,6 +73,7 @@
     circulaerLoaderLayer.lineWidth = 5.0f;
     circulaerLoaderLayer.strokeStart = 0.0f;
     circulaerLoaderLayer.strokeEnd = 1.0f;
+    [CAMediaTimingFunction functionWithControlPoints:2.0 :2.0 :2.0 :2.0];
     [self.view.layer addSublayer:circulaerLoaderLayer];
 }
 
@@ -114,11 +115,13 @@
     [self.view.layer addSublayer:keyFrameAnimationLayer];
     CAKeyframeAnimation* keyFrameAnimation = [CAKeyframeAnimation animation];
     keyFrameAnimation.duration = 5.0;
-    keyFrameAnimation.repeatCount = 2;
+    keyFrameAnimation.repeatCount = 1;
     keyFrameAnimation.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn], [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut], [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     keyFrameAnimation.keyPath = @"position";
-    keyFrameAnimationLayer.autoreverses = YES;
+    keyFrameAnimationLayer.autoreverses = NO;
+    
     keyFrameAnimation.values = @[[NSValue valueWithCGPoint:CGPointMake(10, 70)], [NSValue valueWithCGPoint:CGPointMake(self.view.frame.size.width - 10, 120)], [NSValue valueWithCGPoint:CGPointMake(10, 170)], [NSValue valueWithCGPoint:CGPointMake(self.view.frame.size.width - 10, 220)]];
+    keyFrameAnimationLayer.position = CGPointMake(self.view.frame.size.width - 10, 220);
     [keyFrameAnimationLayer addAnimation:keyFrameAnimation forKey:nil];
 }
 

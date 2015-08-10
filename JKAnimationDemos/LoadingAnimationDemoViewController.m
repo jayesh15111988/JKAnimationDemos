@@ -30,14 +30,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Loading Animation Demo";
+    //[self drawDecentAnimationWithBezierAnimation];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [UIView animateWithDuration:1.0 animations:^{
-        self.view.alpha = 0.0;
-    }];
+    //[UIView animateWithDuration:1.0 animations:^{
+    //    self.view.alpha = 0.0;
+    //}];
     
     [self.activityIndicator startAnimating];
     
@@ -47,13 +48,20 @@
         //Make preparation for desired animation
         self.previousProgressIndicator = 0;
         self.progressIndicator = 0;
-        
         self.radius = 100;
+        
+        UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+        
+        [bezierPath addArcWithCenter:CGPointMake(CGRectGetMidX(self.view.frame) - self.radius,
+                                                 CGRectGetMidY(self.view.frame) - self.radius) radius:self.radius startAngle:-M_PI/2 endAngle:(3/2.0) * M_PI clockwise:YES];
+        
         self.circle = [CAShapeLayer layer];
-        self.circle.path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 2.0 * self.radius, 2.0 * self.radius)
-                                                      cornerRadius: self.radius].CGPath;
+        //self.circle.path = bezierPath.CGPath; //[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 2.0 * self.radius, 2.0 * self.radius)
+        
         self.circle.position = CGPointMake(CGRectGetMidX(self.view.frame) - self.radius,
                                            CGRectGetMidY(self.view.frame) - self.radius);
+        
+       
         
         self.progressIndicatorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.radius, self.radius)];
         self.progressIndicatorLabel.text = @"Loading...";
@@ -67,9 +75,7 @@
         self.circle.fillColor = [UIColor clearColor].CGColor;
         self.circle.strokeColor = [UIColor blackColor].CGColor;
         self.circle.lineWidth = 10;
-        //self.circle.strokeStart = 0.0;
-        //self.circle.strokeEnd = 0.0;
-        self.circle.fillMode = kCAFillModeBoth;
+        self.circle.fillMode = kCAFillModeForwards;
         
         // Add to parent layer
         [self.view.layer addSublayer: self.circle];
@@ -84,24 +90,37 @@
         self.drawAnimation.toValue   = [NSNumber numberWithFloat:self.progressIndicator];
         
         // Experiment with timing to get the appearence to look the way you want
-        self.drawAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        //self.drawAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
         
         [self.activityIndicator stopAnimating];
         // Add the animation to the circle
-        [self.circle addAnimation:self.drawAnimation forKey:UNIQUE_ANIMATION_KEY];
+        //[self.circle addAnimation:self.drawAnimation forKey:UNIQUE_ANIMATION_KEY];
         self.timer = [NSTimer timerWithTimeInterval:DEFAULT_ANIMATION_DURATION target:self selector:@selector(animateCircle) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+     
     });
-    
 }
 
 -(void)animateCircle {
     if(self.progressIndicator <= 1.0) {
-        self.drawAnimation.fromValue   = [NSNumber numberWithFloat:self.previousProgressIndicator];
+        
+        UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+        
+        [bezierPath addArcWithCenter:CGPointMake(CGRectGetMidX(self.view.frame) - self.radius,
+                                                 CGRectGetMidY(self.view.frame) - self.radius) radius:self.radius startAngle:-M_PI/2 endAngle:(self.progressIndicator)*((3/2.0) * M_PI) clockwise:YES];
+        //[self.circle removeAllAnimations];
+        //self.circle = [CAShapeLayer layer];
+        self.circle.path = bezierPath.CGPath; //[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 2.0 * self.radius, 2.0 * self.radius)
+        
+        self.drawAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        self.drawAnimation.duration            = DEFAULT_ANIMATION_DURATION;
+        self.drawAnimation.repeatCount         = 1.0;
+        self.drawAnimation.removedOnCompletion = YES;
+        self.drawAnimation.fromValue = [NSNumber numberWithFloat:self.previousProgressIndicator];
         self.drawAnimation.toValue   = [NSNumber numberWithFloat:self.progressIndicator];
         [self.circle addAnimation:self.drawAnimation forKey:UNIQUE_ANIMATION_KEY];
         self.previousProgressIndicator = self.progressIndicator;
-        self.progressIndicator += 0.05;
+        self.progressIndicator += 0.1;
         self.view.alpha = self.progressIndicator;
         self.progressIndicatorLabel.text = [NSString stringWithFormat:@"%ld%%",(long)(self.progressIndicator*100)];
     } else {
@@ -109,6 +128,50 @@
         self.progressIndicatorLabel.font = [UIFont boldSystemFontOfSize:18];
         [self.timer invalidate];
     }
+}
+
+- (void)drawDecentAnimationWithBezierAnimation {
+    self.view.alpha = 0.0f;
+    CAShapeLayer* circle = [CAShapeLayer layer];
+    self.radius = 100;
+    
+    circle.path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 2.0 * self.radius, 2.0 * self.radius)
+                                             cornerRadius: self.radius].CGPath;
+    circle.position = CGPointMake(CGRectGetMidX(self.view.frame) - self.radius,
+                                  CGRectGetMidY(self.view.frame) - self.radius);
+    
+    //////////
+    circle.fillColor = [UIColor clearColor].CGColor;
+    circle.strokeColor = [UIColor blackColor].CGColor;
+    circle.lineWidth = 10;
+    circle.fillMode = kCAFillModeBoth;
+    
+    /*CAShapeLayer *progressLayer = [[CAShapeLayer alloc] init];
+     
+     [progressLayer setPath: circle.path];
+     [progressLayer setStrokeColor:[UIColor yellowColor].CGColor];
+     [progressLayer setFillColor:[UIColor clearColor].CGColor];
+     [progressLayer setLineWidth:2.0f];
+     [progressLayer setStrokeStart:0.0];
+     [progressLayer setStrokeEnd:1.0];
+     */
+    
+    self.progressIndicatorLabel.text = @"0";
+    
+    [UIView animateWithDuration:2.0f animations:^{
+        self.view.alpha = 1.0f;
+    }];
+    
+    [self.view.layer addSublayer:circle];
+    //[self.view.layer addSublayer:progressLayer];
+    
+    CABasicAnimation *animateStrokeEnd = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animateStrokeEnd.duration  = 2.0f;
+    animateStrokeEnd.fromValue = [NSNumber numberWithFloat:0.0f];
+    animateStrokeEnd.toValue   = [NSNumber numberWithFloat:1.0f];
+    animateStrokeEnd.removedOnCompletion = YES;
+    animateStrokeEnd.autoreverses = NO;
+    [circle addAnimation:animateStrokeEnd forKey:nil];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {

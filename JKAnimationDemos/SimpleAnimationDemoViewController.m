@@ -28,15 +28,14 @@
     self.title = @"Animation Demos";
     
     self.layer = [CALayer layer];
+    [self.sampleView.layer addSublayer:self.layer];
+    
     self.layer.backgroundColor = [UIColor redColor].CGColor;
-    self.layer.borderWidth = 1.0f;
-    self.layer.borderColor = [UIColor blackColor].CGColor;
     self.layer.frame = self.sampleView.bounds;
     CATransition* transition = [CATransition animation];
-    transition.type = kCATransitionPush;
-    transition.subtype = kCATransitionFromTop;
+    transition.type = kCATransitionReveal;
+    transition.subtype = kCATransitionFromBottom;
     self.layer.actions = @{@"backgroundColor": transition};
-    [self.sampleView.layer addSublayer:self.layer];
     
     self.complexLayer = [CALayer layer];
     self.complexLayer.frame = self.complexView.bounds;
@@ -55,7 +54,6 @@
     [CATransaction setCompletionBlock:^{
         NSLog(@"Color change animation is complete now!");
     }];
-
     self.layer.backgroundColor = [self getRandomColor];
     [CATransaction commit];
 }
@@ -67,7 +65,7 @@
     self.recentBackgroundColor = [self getRandomColor];
     animation.toValue = (__bridge id) self.recentBackgroundColor;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    animation.duration = 2.0f;
+    animation.duration = DEFAULT_ANIMATION_DURATION;
     self.complexLayer.backgroundColor = self.recentBackgroundColor;
     animation.delegate = self;
     animation.removedOnCompletion = YES;
@@ -75,9 +73,7 @@
 }
 
 - (void)animationDidStop:(CABasicAnimation *)anim finished:(BOOL)flag {
-    //CAAnimation* backgroundColorChangeAnimation = [self.complexLayer animationForKey:@"backgroundColorChangeAnimation"];
     NSLog(@"Successfully retrieved animation from given key for background color change property");
-    NSLog(@"We successfully finished animation with CABasic Animation block API");
 }
 
 - (IBAction)beginKeyframeAnimationButtonPressed:(id)sender {
@@ -87,10 +83,11 @@
     self.keyframeAnimationRecentColor = [self getRandomColor];
     keyframeAnimation.values = @[(__bridge id) [self getRandomColor], (__bridge id) [self getRandomColor], (__bridge id) [self getRandomColor], (__bridge id) self.keyframeAnimationRecentColor];
     self.keyframeAnimationLayer.backgroundColor = self.keyframeAnimationRecentColor;
+    keyframeAnimation.removedOnCompletion = YES;
     [self.keyframeAnimationLayer addAnimation:keyframeAnimation forKey:nil];
 }
 
--(CGColorRef)getRandomColor {
+- (CGColorRef)getRandomColor {
     CGFloat redColor = rand()/(CGFloat)INT_MAX;
     CGFloat greenColor = rand()/(CGFloat)INT_MAX;
     CGFloat blueColor = rand()/(CGFloat)INT_MAX;

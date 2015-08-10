@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomDrawingView : UIView
-@property (assign) BOOL isRegularModeOn;
+
 @end

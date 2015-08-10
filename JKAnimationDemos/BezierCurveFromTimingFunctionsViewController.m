@@ -80,7 +80,6 @@
     [self setLayerWithPath:[self getPathFromMediaTimingFunction:[CAMediaTimingFunction functionWithControlPoints:[self.point1X.text floatValue] :[self.point1Y.text floatValue] :[self.point2X.text floatValue] :[self.point2Y.text floatValue]]]];
 }
 
-
 - (IBAction)viewTapped:(id)sender {
     [self.view endEditing:YES];
 }

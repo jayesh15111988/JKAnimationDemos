@@ -30,7 +30,7 @@
     emitterCell.birthRate = 20;
     emitterCell.lifetime = 5;
     emitterCell.velocity = 50;
-    emitterCell.emissionRange = M_PI * 2;
+    emitterCell.emissionRange = M_PI * 2.0;
     emitterCell.alphaSpeed = -0.5;
     emitterCell.velocityRange = 100;
     emitterLayer.emitterCells = @[emitterCell];

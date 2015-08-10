@@ -27,12 +27,6 @@
     replicatorLayer.instanceAlphaOffset = -0.9;
     
     CATransform3D transform = CATransform3DIdentity;
-    //transform = CATransform3DTranslate(transform, 50, 0, 0);
-    //transform = CATransform3DRotate(transform, M_PI/5, 0, 0,1);
-    //transform = CATransform3DTranslate(transform, -50, 0, 0);
-    
-    //transform = CATransform3DRotate(transform, M_PI, 1, 0, 0);
-    //transform = CATransform3DTranslate(transform, 0, -10, 0);
     transform = CATransform3DTranslate(transform, 0, -2 * VIEW_SIZE + 5, 0);
     transform = CATransform3DScale(transform, 1, -1, 0);
     replicatorLayer.instanceTransform = transform;

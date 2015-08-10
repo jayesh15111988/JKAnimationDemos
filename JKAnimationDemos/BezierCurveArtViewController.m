@@ -13,6 +13,7 @@
 @interface BezierCurveArtViewController ()
 @property (weak, nonatomic) IBOutlet UIView *containerOne;
 @property (weak, nonatomic) IBOutlet UIView *containerTwo;
+@property (strong, nonatomic) CAShapeLayer* progressLayer;
 @end
 
 @implementation BezierCurveArtViewController
@@ -22,7 +23,6 @@
     self.title = @"Bezier Curves Demo";
     UIBezierPath* path = [[UIBezierPath alloc] init];
     CGFloat containerOneCenterX = self.containerOne.center.x - MAN_IMAGE_HEAD_RADIUS;
-    //[path moveToPoint:CGPointMake(containerOneCenterX, 10)];
     [path addArcWithCenter:CGPointMake(containerOneCenterX, MAN_IMAGE_HEAD_RADIUS) radius:MAN_IMAGE_HEAD_RADIUS startAngle:0 endAngle:2*M_PI clockwise:YES];
     [path moveToPoint:CGPointMake(containerOneCenterX, 40)];
     [path addLineToPoint:CGPointMake(containerOneCenterX, 100)];
@@ -55,6 +55,28 @@
     shapeLayerForRoundedCornerRectangle.lineWidth = 3.0f;
     shapeLayerForRoundedCornerRectangle.path = customeRoundedCornerBezierPath.CGPath;
     [self.containerTwo.layer addSublayer:shapeLayerForRoundedCornerRectangle];
+    
+    
+    self.progressLayer = [[CAShapeLayer alloc] init];
+    
+    [path moveToPoint:CGPointMake(200, 200)];
+    
+    [self.progressLayer setPath: customeRoundedCornerBezierPath.CGPath];
+    [self.progressLayer setStrokeColor:[UIColor greenColor].CGColor];
+    [self.progressLayer setFillColor:[UIColor clearColor].CGColor];
+    [self.progressLayer setLineWidth:1.0f];
+    [self.progressLayer setStrokeStart:0.0];
+    [self.progressLayer setStrokeEnd:1.0];
+    
+    [self.containerTwo.layer addSublayer:self.progressLayer];
+    
+    
+    CABasicAnimation *animateStrokeEnd = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animateStrokeEnd.duration  = 5.0;
+    animateStrokeEnd.fromValue = [NSNumber numberWithFloat:0.0f];
+    animateStrokeEnd.toValue   = [NSNumber numberWithFloat:1.0f];
+    animateStrokeEnd.removedOnCompletion = YES;
+    [self.progressLayer addAnimation:animateStrokeEnd forKey:nil];
     
 }
 
