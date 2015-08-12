@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3835C57B1B7AE4B90086F378 /* MoreExamplesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3835C57A1B7AE4B90086F378 /* MoreExamplesViewController.m */; };
 		3849D2F21AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3849D2F11AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m */; };
 		386D6D3F1AAB687C00131328 /* FadingBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D3E1AAB687C00131328 /* FadingBackgroundViewController.m */; };
 		386D6D431AAB694C00131328 /* FadedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D6D421AAB694C00131328 /* FadedView.m */; };
@@ -57,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3835C5791B7AE4B90086F378 /* MoreExamplesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreExamplesViewController.h; sourceTree = "<group>"; };
+		3835C57A1B7AE4B90086F378 /* MoreExamplesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreExamplesViewController.m; sourceTree = "<group>"; };
 		3849D2F01AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingAnimationDemoViewController.h; sourceTree = "<group>"; };
 		3849D2F11AA8035E00DCA9B3 /* LoadingAnimationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingAnimationDemoViewController.m; sourceTree = "<group>"; };
 		386D6D3D1AAB687C00131328 /* FadingBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadingBackgroundViewController.h; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 				389ECCE11AB28291003B9EEA /* LayerMaskingViewController.m */,
 				38EE2A4D1ABBAFE9004C7668 /* LineDrawDemoViewController.h */,
 				38EE2A4E1ABBAFE9004C7668 /* LineDrawDemoViewController.m */,
+				3835C5791B7AE4B90086F378 /* MoreExamplesViewController.h */,
+				3835C57A1B7AE4B90086F378 /* MoreExamplesViewController.m */,
 			);
 			name = "Animation Demo ViewControllers";
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				386D6D531AAB7C3700131328 /* TDCubeLayerViewController.m in Sources */,
 				3874DB061AA3E92000259C0F /* AppDelegate.m in Sources */,
 				386D6D711AAD071F00131328 /* UIImage+Cropped.m in Sources */,
+				3835C57B1B7AE4B90086F378 /* MoreExamplesViewController.m in Sources */,
 				386D6D6B1AAC01AF00131328 /* ComplexBezierPathTrailDemoViewController.m in Sources */,
 				386D6D431AAB694C00131328 /* FadedView.m in Sources */,
 				389ECCE21AB28291003B9EEA /* LayerMaskingViewController.m in Sources */,

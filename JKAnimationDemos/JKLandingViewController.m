@@ -35,8 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Core Animation Demos";
-    self.demosList = @[@"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Emitter Layer", @"Video Playback", @"Animation Demo", @"Bezier Movement", @"Custom Transition", @"Media Timings", @"Bezier Curve Fun", @"More Examples"];
-    self.storyboardIdentifiersCollection = @[@"fading", @"animatedimage", @"bezierpath", @"3dcube", @"emitter", @"video", @"animation", @"beziermovement", @"customtransition", @"mediatiming", @"bezierplay", @"layermask"];
+    self.demosList = @[@"Faded View", @"Animated Image", @"Bezier Path", @"3D Cube", @"Emitter Layer", @"Video Playback", @"Animation Demo", @"Bezier Movement", @"Custom Transition", @"Media Timings", @"Bezier Curve Fun", @"More Examples", @"More More Examples"];
+    self.storyboardIdentifiersCollection = @[@"fading", @"animatedimage", @"bezierpath", @"3dcube", @"emitter", @"video", @"animation", @"beziermovement", @"customtransition", @"mediatiming", @"bezierplay", @"layermask", @"moreExamples"];
     [self.tableView reloadData];
 }
 

@@ -1072,6 +1072,25 @@
             </objects>
             <point key="canvasLocation" x="5207" y="587"/>
         </scene>
+        <!--More Examples View Controller-->
+        <scene sceneID="vNa-Bd-RFC">
+            <objects>
+                <viewController storyboardIdentifier="moreExamples" id="vm3-ie-Wq4" customClass="MoreExamplesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ru-QC-hBS"/>
+                        <viewControllerLayoutGuide type="bottom" id="VIe-5o-FsA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zqh-V8-sNi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4x-Vk-VRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5785" y="-294"/>
+        </scene>
         <!--Line Draw Demo View Controller-->
         <scene sceneID="QWb-vR-otE">
             <objects>

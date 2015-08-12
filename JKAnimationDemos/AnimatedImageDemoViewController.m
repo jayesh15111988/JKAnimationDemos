@@ -37,7 +37,6 @@
 
 -(void)changeAnimatingImage {
     
-    NSLog(@"X Offset %f and Y Offset %f", self.xAxisSpriteOffset, self.yAxisSpriteOffset);
     if(self.xAxisSpriteOffset >= 1.0) {
         self.xAxisSpriteOffset = 0.0;
         self.yAxisSpriteOffset += _yOffsetIncrement;
